@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{D72EBCE5-448B-4F1A-B6E2-D9CAC10A6719}</ProjectGuid>
-    <RootNamespace>identificatoranalyzer</RootNamespace>
+    <ProjectGuid>{5835ADFD-D35B-428D-A596-3F9912A1AEBF}</ProjectGuid>
+    <RootNamespace>identificatoranalyzertests</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,7 +115,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
