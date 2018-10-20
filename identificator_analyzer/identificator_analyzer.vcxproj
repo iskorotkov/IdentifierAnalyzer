@@ -122,12 +122,14 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="simple_parser.cpp" />
     <ClCompile Include="simple_parser_result.cpp" />
+    <ClCompile Include="special_words_filter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="file_reader.h" />
     <ClInclude Include="io_exception.h" />
     <ClInclude Include="simple_parser.h" />
     <ClInclude Include="simple_parser_result.h" />
+    <ClInclude Include="special_words_filter.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="example.txt" />
