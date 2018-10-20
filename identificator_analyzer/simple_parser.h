@@ -6,9 +6,5 @@ class file_reader;
 class simple_parser
 {
 public:
-	void parse_all(file_reader reader);
-	inline simple_parser_result get_result() const { return result; }
-
-private:
-	simple_parser_result result;
+	simple_parser_result parse_all(file_reader& reader);
 };
