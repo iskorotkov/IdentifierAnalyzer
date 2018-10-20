@@ -117,10 +117,14 @@
   <ItemGroup>
     <ClCompile Include="file_reader.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="simple_parser.cpp" />
+    <ClCompile Include="simple_parser_result.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="file_reader.h" />
     <ClInclude Include="io_exception.h" />
+    <ClInclude Include="simple_parser.h" />
+    <ClInclude Include="simple_parser_result.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

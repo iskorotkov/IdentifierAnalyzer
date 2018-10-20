@@ -8,18 +8,20 @@ public:
 	file_reader(std::string file_name);
 
 	template <typename T>
-	T read_word()
+	void read_word(T destination)
 	{
-		T t;
-		input_file >> t;
-		return t;
+		input_file >> destination;
 	}
 
-	std::string read_word();
-	std::string read_line();
+	void read_word(std::string destination);
+	void read_line(std::string destination);
 	void open_file(std::string file_name);
 	void close_file();
 
+	file_reader& operator>>(std::string destinaton);
+	operator bool() const;
+
 private:
 	std::ifstream input_file;
+	bool file_is_open = false;
 };
