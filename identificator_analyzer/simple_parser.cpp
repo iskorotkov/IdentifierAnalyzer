@@ -5,11 +5,11 @@
 
 simple_parser_result simple_parser::parse_all(file_reader& reader)
 {
-	std::map<std::string, int> words_count;
+	std::map<std::string, int> all_words;
 	std::string buffer;
 	while (reader.read_words_till_end(buffer))
 	{
-		++words_count[buffer];
+		++all_words[buffer];
 	}
-	return simple_parser_result(words_count);
+	return simple_parser_result(all_words);
 }

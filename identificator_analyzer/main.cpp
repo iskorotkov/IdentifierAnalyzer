@@ -7,7 +7,7 @@ int main()
 	file_reader reader("example.txt");
 	simple_parser parser;
 	auto result = parser.parse_all(reader);
-	for (const auto& it : result.get_words_count())
+	for (const auto& it : result.get_all_words())
 	{
 		for (const auto& c : it.first)
 		{

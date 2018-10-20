@@ -4,9 +4,14 @@
 class simple_parser_result
 {
 public:
-	simple_parser_result(std::map<std::string, int> words_count) : words_count(words_count) {}
+	simple_parser_result(std::map<std::string, int> all_words);
 
-	inline auto get_words_count() const { return words_count; }
+	inline auto get_all_words() const { return all_words; }
+	inline auto get_special_words() const { return special_words; }
+	inline auto get_user_words() const { return user_words; }
+
 private:
-	std::map<std::string, int> words_count;
+	std::map<std::string, int> all_words;
+	std::map<std::string, int> special_words;
+	std::map<std::string, int> user_words;
 };
