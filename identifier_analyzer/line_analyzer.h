@@ -9,9 +9,6 @@ class line_analyzer : public analyzer<line_data>
 public:
 	line_data analyze(const std::string& source) override;
 
-	// TODO: remove method
-	auto get_words() const { return words; }
-
 private:
 	std::vector<std::string> words;
 	line_data result;

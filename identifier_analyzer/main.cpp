@@ -6,7 +6,6 @@
 int main()
 {
 	line_analyzer a;
-	auto i = a.analyze("a = b + c = d;").get_used_identifiers();
-	auto w = a.get_words();
+	auto i = a.analyze("f(a, b+c, d, 10, a, a*10)").get_used_identifiers();
 	std::cout << i;
 }

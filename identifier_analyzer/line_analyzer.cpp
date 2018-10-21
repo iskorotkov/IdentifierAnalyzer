@@ -16,7 +16,7 @@ void line_analyzer::parse_line(const std::string& line)
 	std::vector<char> buffer;
 	for (const auto& c : line)
 	{
-		if (is_separator(c))
+		if (is_separator(c) || is_operator(c))
 		{
 			add_word(buffer);
 			add_word(c);
@@ -89,9 +89,19 @@ void line_analyzer::add_word(const char& c)
 
 void line_analyzer::choose_pattern()
 {
-	auto words_size = words.size();
-	if (true) // debug purpose only
+	// TODO: add switching logic
+	analyze_function_call();
+}
+
+void line_analyzer::analyze_function_call()
+{
+	unsigned int index = 2;
+	while (index < words.size())
 	{
-		analyze_assignment();
+		if (is_valid_identifier_first_letter(words.at(index)[0]))
+		{
+			result.add_used_variable(words.at(index));
+		}
+		++index;
 	}
 }

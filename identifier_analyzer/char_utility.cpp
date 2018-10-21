@@ -33,7 +33,7 @@ bool is_whitespace(char c)
 	return c == ' ' || c == '\t';
 }
 
-bool is_operation(char c)
+bool is_operator(char c)
 {
 	return c == '='
 		|| c == '+'
