@@ -122,7 +122,6 @@
     <ClCompile Include="char_utility.cpp" />
     <ClCompile Include="io_utility.cpp" />
     <ClCompile Include="line_analyzer.cpp" />
-    <ClCompile Include="line_data.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="block_analyzer.cpp" />
   </ItemGroup>

@@ -17,3 +17,12 @@ std::ostream& operator<<(std::ostream& out, std::string& s)
 	}
 	return out;
 }
+
+std::ostream& operator<<(std::ostream& out, std::vector<std::string> v)
+{
+	for (const auto& it : v)
+	{
+		out << it << '\n';
+	}
+	return out;
+}
