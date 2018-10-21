@@ -23,6 +23,7 @@
     <ProjectGuid>{D72EBCE5-448B-4F1A-B6E2-D9CAC10A6719}</ProjectGuid>
     <RootNamespace>identificatoranalyzer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <ProjectName>identifier_analyzer</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -118,10 +119,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="analyzer.cpp" />
+    <ClCompile Include="block_data.cpp" />
+    <ClCompile Include="data.cpp" />
+    <ClCompile Include="line_analyzer.cpp" />
+    <ClCompile Include="line_data.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="block_analyzer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="analyzer.h" />
+    <ClInclude Include="block_data.h" />
+    <ClInclude Include="data.h" />
     <ClInclude Include="io_exception.h" />
+    <ClInclude Include="block_analyzer.h" />
+    <ClInclude Include="line_analyzer.h" />
+    <ClInclude Include="line_data.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="example.txt" />
