@@ -7,7 +7,7 @@ int main()
 {
 	line_analyzer a;
 	auto i = a.analyze(
-		"int a = f(b, c), b = t(a, l);"
+		"int t = f(ab,cd), k = fr();"
 	).get_used_identifiers();
 	std::cout << i;
 }
