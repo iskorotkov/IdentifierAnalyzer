@@ -5,4 +5,4 @@
 
 std::ostream& operator<<(std::ostream& out, const std::map<std::string, int>& m);
 
-std::ostream& operator<<(std::ostream& out, const std::string& s);
+std::ostream& operator<<(std::ostream& out, std::string& s);

@@ -27,6 +27,9 @@
     <ClCompile Include="io_utility.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="line_data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="io_exception.h">

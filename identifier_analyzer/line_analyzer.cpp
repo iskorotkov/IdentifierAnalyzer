@@ -9,6 +9,10 @@ line_data line_analyzer::analyze(const std::string& source)
 	parse_line(source);
 	auto size = words.size();
 	line_data result;
+	for (const auto& w : words)
+	{
+		result.add_used_variable(w);
+	}
 	return result;
 }
 
