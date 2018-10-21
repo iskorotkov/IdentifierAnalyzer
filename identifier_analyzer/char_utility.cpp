@@ -45,3 +45,17 @@ bool is_operator(char c)
 		|| c == '^'
 		|| c == '~';
 }
+
+bool is_opening_brace(char c)
+{
+	return c == '('
+		|| c == '['
+		|| c == '{';
+}
+
+bool is_closing_brace(char c)
+{
+	return c == ')'
+		|| c == ']'
+		|| c == '}';
+}

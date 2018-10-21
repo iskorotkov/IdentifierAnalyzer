@@ -6,6 +6,8 @@
 int main()
 {
 	line_analyzer a;
-	auto i = a.analyze("int a = bad*cad*dad, b = x + y * z, c = k, d, e;").get_used_identifiers();
+	auto i = a.analyze(
+		"int a = f(b, c), b = t(a, l);"
+	).get_used_identifiers();
 	std::cout << i;
 }

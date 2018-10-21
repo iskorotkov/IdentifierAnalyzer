@@ -21,6 +21,8 @@ private:
 	void analyze_assignment(unsigned int end_index, unsigned int start_index = 0);
 	void analyze_variable_introduction();
 	unsigned int find_next_separator(unsigned int start_index);
+	unsigned int find_function_call_end(unsigned int start_index);
 	void add_word(const std::vector<char> v);
 	void add_word(const char& c);
+	inline char get_first_letter(unsigned int index) { return words.at(index)[0]; }
 };

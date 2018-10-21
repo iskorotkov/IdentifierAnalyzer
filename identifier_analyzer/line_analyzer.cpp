@@ -44,6 +44,17 @@ void line_analyzer::analyze_assignment(unsigned int end_index, unsigned int star
 		{
 			result.add_used_variable(words.at(index));
 		}
+		else if (index > 0
+			&& is_separator(words.at(index)[0])
+			&& is_valid_identifier_first_letter(words.at(index - 1)[0]))
+		{
+			auto function_call_end = find_function_call_end(index);
+			if (function_call_end > index + 1)
+			{
+				analyze_function_call(function_call_end, index);
+				index = function_call_end + 1;
+			}
+		}
 		++index;
 	}
 }
@@ -97,6 +108,25 @@ unsigned int line_analyzer::find_next_separator(unsigned int start_index)
 {
 	while (!is_separator(words.at(start_index)[0]) && start_index < words.size())
 	{
+		++start_index;
+	}
+	return start_index;
+}
+
+unsigned int line_analyzer::find_function_call_end(unsigned int start_index)
+{
+	++start_index;
+	unsigned int depth_level = 1;
+	while (depth_level != 0)
+	{
+		if (is_closing_brace(get_first_letter(start_index)))
+		{
+			--depth_level;
+		}
+		else if (is_opening_brace(get_first_letter(start_index)))
+		{
+			++depth_level;
+		}
 		++start_index;
 	}
 	return start_index;
