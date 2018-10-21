@@ -2,8 +2,7 @@
 #include "block_data.h"
 #include "analyzer.h"
 
-class block_analyzer : analyzer
+class block_analyzer : analyzer<block_data>
 {
 public:
-	void analyze(block_data data);
 };
