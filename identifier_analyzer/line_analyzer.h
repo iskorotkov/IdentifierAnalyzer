@@ -15,9 +15,12 @@ private:
 
 	void parse_line(const std::string& source);
 	void choose_pattern();
-	void analyze_function_call();
-	void analyze_assignment();
+
+	// TODO: end index, then start index. Misleading
+	void analyze_function_call(unsigned int end_index, unsigned int start_index = 2);
+	void analyze_assignment(unsigned int end_index, unsigned int start_index = 0);
 	void analyze_variable_introduction();
+	unsigned int find_next_separator(unsigned int start_index);
 	void add_word(const std::vector<char> v);
 	void add_word(const char& c);
 };

@@ -35,10 +35,10 @@ void line_analyzer::parse_line(const std::string& line)
 	add_word(buffer);
 }
 
-void line_analyzer::analyze_assignment()
+void line_analyzer::analyze_assignment(unsigned int end_index, unsigned int start_index)
 {
-	unsigned int index = 0;
-	while (index < words.size())
+	unsigned int index = start_index;
+	while (index < end_index)
 	{
 		if (is_valid_identifier_first_letter(words.at(index)[0]))
 		{
@@ -52,26 +52,54 @@ void line_analyzer::analyze_variable_introduction()
 {
 	unsigned int index = 1;
 	bool first_found = false;
+
+	// Analyze first identifier ("a" in "int a, b, c")
 	while (index < words.size() && !first_found)
 	{
-		if (is_separator(words.at(index)[0]))
+		if (!is_valid_identifier_first_letter(words.at(index)[0]) &&
+			is_valid_identifier_first_letter(words.at(index - 1)[0]))
 		{
-			if (index > 0)
+			auto next_separator = find_next_separator(index);
+			if (next_separator > index + 1)
 			{
-				first_found = true;
+				analyze_assignment(next_separator, index - 1);
+			}
+			else
+			{
 				result.add_used_variable(words.at(index - 1));
 			}
+
+			first_found = true;
 		}
 		++index;
 	}
+
+	// Analyze the rest of identifiers ("b" and "c" in "int a, b, c")
 	while (index < words.size())
 	{
 		if (is_separator(words.at(index - 1)[0]) && is_valid_identifier_first_letter(words.at(index)[0]))
 		{
-			result.add_used_variable(words.at(index));
+			auto next_separator = find_next_separator(index);
+			if (next_separator > index + 1)
+			{
+				analyze_assignment(next_separator, index);
+			}
+			else
+			{
+				result.add_used_variable(words.at(index));
+			}
 		}
 		++index;
 	}
+}
+
+unsigned int line_analyzer::find_next_separator(unsigned int start_index)
+{
+	while (!is_separator(words.at(start_index)[0]) && start_index < words.size())
+	{
+		++start_index;
+	}
+	return start_index;
 }
 
 void line_analyzer::add_word(const std::vector<char> v)
@@ -90,13 +118,13 @@ void line_analyzer::add_word(const char& c)
 void line_analyzer::choose_pattern()
 {
 	// TODO: add switching logic
-	analyze_function_call();
+	analyze_variable_introduction();
 }
 
-void line_analyzer::analyze_function_call()
+void line_analyzer::analyze_function_call(unsigned int end_index, unsigned int start_index)
 {
-	unsigned int index = 2;
-	while (index < words.size())
+	unsigned int index = start_index;
+	while (index < end_index)
 	{
 		if (is_valid_identifier_first_letter(words.at(index)[0]))
 		{
