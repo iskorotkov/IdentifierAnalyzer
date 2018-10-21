@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28124.53
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "identificator_analyzer", "identificator_analyzer\identificator_analyzer.vcxproj", "{D72EBCE5-448B-4F1A-B6E2-D9CAC10A6719}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "identifier_analyzer", "identifier_analyzer\identificator_analyzer.vcxproj", "{D72EBCE5-448B-4F1A-B6E2-D9CAC10A6719}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "identificator_analyzer_test", "identificator_analyzer_test\identificator_analyzer_test.vcxproj", "{CE5B5090-8891-48A6-9BA8-CDE28EB838EB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "identifier_analyzer_tests", "identifier_analyzer_tests\identificator_analyzer_test.vcxproj", "{CE5B5090-8891-48A6-9BA8-CDE28EB838EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
