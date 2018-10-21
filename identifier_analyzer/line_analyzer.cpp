@@ -4,14 +4,14 @@
 #include "data.h"
 #include "char_utility.h"
 
-line_data line_analyzer::analyze(const std::string& source)
+line_data line_analyzer::analyze(const std::vector<char>& source)
 {
 	parse_line(source);
 	choose_pattern();
 	return result;
 }
 
-void line_analyzer::parse_line(const std::string& line)
+void line_analyzer::parse_line(const std::vector<char>& line)
 {
 	std::vector<char> buffer;
 	for (const auto& c : line)
@@ -132,6 +132,16 @@ unsigned int line_analyzer::find_function_call_end(unsigned int start_index)
 	return start_index;
 }
 
+unsigned int line_analyzer::find_first_special_symbol(unsigned int start_index)
+{
+	while (start_index < words.size()
+		&& !is_valid_identifier_first_letter(get_first_letter(start_index)))
+	{
+		++start_index;
+	}
+	return start_index;
+}
+
 void line_analyzer::add_word(const std::vector<char> v)
 {
 	if (v.cbegin() != v.cend())
@@ -147,8 +157,19 @@ void line_analyzer::add_word(const char& c)
 
 void line_analyzer::choose_pattern()
 {
-	// TODO: add switching logic
-	analyze_variable_introduction();
+	auto index = find_first_special_symbol(0);
+	if (index == 1 && is_operator(get_first_letter(index)))
+	{
+		analyze_assignment(words.size());
+	}
+	else if (index == 1 && is_opening_brace(get_first_letter(index)))
+	{
+		analyze_function_call(words.size());
+	}
+	else
+	{
+		analyze_variable_introduction();
+	}
 }
 
 void line_analyzer::analyze_function_call(unsigned int end_index, unsigned int start_index)
