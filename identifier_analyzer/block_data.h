@@ -1,5 +1,7 @@
 #pragma once
-class block_data
+#include "data.h"
+
+class block_data : data
 {
 public:
 };

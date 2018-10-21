@@ -1,7 +1,8 @@
 #pragma once
 #include <string>
+#include "analyzer.h"
 
-class line_analyzer
+class line_analyzer : analyzer
 {
 public:
 

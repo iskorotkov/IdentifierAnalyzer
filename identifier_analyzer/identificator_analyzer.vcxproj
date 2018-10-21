@@ -119,11 +119,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="analyzer.cpp" />
-    <ClCompile Include="block_data.cpp" />
-    <ClCompile Include="data.cpp" />
     <ClCompile Include="line_analyzer.cpp" />
-    <ClCompile Include="line_data.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="block_analyzer.cpp" />
   </ItemGroup>
