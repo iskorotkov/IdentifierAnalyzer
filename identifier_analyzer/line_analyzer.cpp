@@ -35,6 +35,19 @@ void line_analyzer::parse_line(const std::string& line)
 	add_word(buffer);
 }
 
+void line_analyzer::analyze_assignment()
+{
+	unsigned int index = 0;
+	while (index < words.size())
+	{
+		if (is_valid_identifier_first_letter(words.at(index)[0]))
+		{
+			result.add_used_variable(words.at(index));
+		}
+		++index;
+	}
+}
+
 void line_analyzer::analyze_variable_introduction()
 {
 	unsigned int index = 1;
@@ -79,6 +92,6 @@ void line_analyzer::choose_pattern()
 	auto words_size = words.size();
 	if (true) // debug purpose only
 	{
-		analyze_variable_introduction();
+		analyze_assignment();
 	}
 }
