@@ -30,6 +30,9 @@
     <ClCompile Include="line_data.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="char_utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="io_exception.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="io_utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="char_utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

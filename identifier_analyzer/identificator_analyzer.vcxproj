@@ -119,6 +119,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="char_utility.cpp" />
     <ClCompile Include="io_utility.cpp" />
     <ClCompile Include="line_analyzer.cpp" />
     <ClCompile Include="line_data.cpp" />
@@ -128,6 +129,7 @@
   <ItemGroup>
     <ClInclude Include="analyzer.h" />
     <ClInclude Include="block_data.h" />
+    <ClInclude Include="char_utility.h" />
     <ClInclude Include="data.h" />
     <ClInclude Include="io_exception.h" />
     <ClInclude Include="block_analyzer.h" />
