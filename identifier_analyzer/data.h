@@ -5,8 +5,8 @@
 class data
 {
 public:
-	inline auto get_identifiers() const { return identifiers; }
+	auto get_used_identifiers() const { return used_identifiers; }
 
-private:
-	std::map<std::string, int> identifiers;
+protected:
+	std::map<std::string, int> used_identifiers;
 };

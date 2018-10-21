@@ -4,12 +4,9 @@
 #include <map>
 #include <string>
 
-class line_data : data
+class line_data : public data
 {
 public:
-	auto get_used_variables() const { return used_variables; }
-	void add_used_variable(const std::string& name);
 
-private:
-	std::map<std::string, int> used_variables;
+	void add_used_variable(const std::string& name) { ++used_identifiers[name]; }
 };
