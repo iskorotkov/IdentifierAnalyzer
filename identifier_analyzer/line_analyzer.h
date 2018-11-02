@@ -7,12 +7,12 @@
 class line_analyzer : public analyzer<line_data>
 {
 public:
-	line_data analyze(const std::vector<char>& source) override;
+	virtual line_data analyze(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end) override;
 
 private:
 	std::vector<std::string> words;
 
-	void parse_line(const std::vector<char>& source);
+	void parse_line(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end);
 	void choose_pattern();
 
 	// TODO: end index, then start index. Misleading

@@ -20,6 +20,6 @@ int main()
 		}
 	}
 	block_analyzer a;
-	auto i = a.analyze(source).get_used_identifiers();
+	auto i = a.analyze(source.cbegin(), source.cend()).get_used_identifiers();
 	std::cout << i;
 }

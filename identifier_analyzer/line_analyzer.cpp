@@ -4,32 +4,32 @@
 #include "data.h"
 #include "char_utility.h"
 
-line_data line_analyzer::analyze(const std::vector<char>& source)
+line_data line_analyzer::analyze(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end)
 {
-	parse_line(source);
+	parse_line(start, end);
 	choose_pattern();
 	return result;
 }
 
-void line_analyzer::parse_line(const std::vector<char>& line)
+void line_analyzer::parse_line(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end)
 {
 	std::vector<char> buffer;
-	for (const auto& c : line)
+	for (auto c = start; c < end; ++c)
 	{
-		if (is_separator(c) || is_operator(c))
+		if (is_separator(*c) || is_operator(*c))
 		{
 			add_word(buffer);
-			add_word(c);
+			add_word(*c);
 			buffer.clear();
 		}
-		else if (is_whitespace(c))
+		else if (is_whitespace(*c))
 		{
 			add_word(buffer);
 			buffer.clear();
 		}
 		else
 		{
-			buffer.emplace_back(c);
+			buffer.emplace_back(*c);
 		}
 	}
 	add_word(buffer);
@@ -106,7 +106,7 @@ void line_analyzer::analyze_variable_introduction()
 
 unsigned int line_analyzer::find_next_separator(unsigned int start_index)
 {
-	while (!is_separator(words.at(start_index)[0]) && start_index < words.size())
+	while (start_index < words.size() && !is_separator(words.at(start_index)[0]))
 	{
 		++start_index;
 	}

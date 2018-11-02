@@ -3,28 +3,28 @@
 #include "block_data.h"
 #include "line_analyzer.h"
 
-block_data block_analyzer::analyze(const std::vector<char>& source)
+block_data block_analyzer::analyze(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end)
 {
-	unsigned int start_index = 0, end_index = 0;
-	while (end_index < source.size())
+	auto delimiter = start, it = start;
+	while (it < end)
 	{
-		if (source[end_index] == '\n')
+		if (*it == '\n')
 		{
-			analyze_line(source, start_index, end_index);
-			start_index = end_index;
+			analyze_line(delimiter, it);
+			delimiter = it;
 		}
-		++end_index;
+		++it;
 	}
-	if (start_index != end_index)
+	if (delimiter != it)
 	{
-		analyze_line(source, start_index, end_index);
+		analyze_line(delimiter, it);
 	}
 	return result;
 }
 
-void block_analyzer::analyze_line(const std::vector<char> &source, unsigned int start_index, unsigned int end_index)
+void block_analyzer::analyze_line(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end)
 {
 	line_analyzer an;
-	auto line_result = an.analyze(std::vector<char>(source.cbegin() + start_index, source.cbegin() + end_index));
+	auto line_result = an.analyze(start, end);
 	result.add_line_data(line_result);
 }
