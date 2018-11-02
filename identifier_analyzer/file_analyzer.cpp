@@ -19,18 +19,21 @@ file_data file_analyzer::analyze(std::string file_name)
 		file_content.insert(file_content.cend(), buffer.begin(), buffer.end());
 		file_content.emplace_back('\n');
 	}
-	auto start = skip_comments_and_preprocessor_directives(file_content.begin(), file_content.end());
+	auto start = skip_file_header(file_content.begin(), file_content.end());
 	return pass_to_analyze(start + 1, file_content.cend());
 }
 
-base_analyzer::c_iter file_analyzer::skip_comments_and_preprocessor_directives(const c_iter start, const c_iter end)
+base_analyzer::c_iter file_analyzer::skip_file_header(const c_iter start, const c_iter end)
 {
-	auto it = start;
-	while (it < end && (is_slash(*it) || is_hashtag(*it)))
+	auto line_start = start;
+	auto it = get_line_end(start, end);
+	while (it < end
+		&& (is_slash(*line_start) || is_hashtag(*line_start) || is_blank_line(line_start, it)))
 	{
+		line_start = it;
 		it = get_line_end(it, end) + 1;
 	}
-	return it;
+	return line_start;
 }
 
 file_data file_analyzer::pass_to_analyze(const c_iter start, const c_iter end)
@@ -40,6 +43,22 @@ file_data file_analyzer::pass_to_analyze(const c_iter start, const c_iter end)
 	file_data result;
 	result.add_block_data(r);
 	return result;
+}
+
+bool file_analyzer::is_blank_line(c_iter start, c_iter end)
+{
+	if (start + 1 >= end)
+	{
+		return true;
+	}
+	for (auto it = start; it < end; ++it)
+	{
+		if (!is_whitespace(*it) && *it != '\n')
+		{
+			return false;
+		}
+	}
+	return true;
 }
 
 base_analyzer::c_iter file_analyzer::get_line_end(const c_iter start, const c_iter end)

@@ -1,7 +1,11 @@
+// Code created by Ivan
+   
 #include <iostream>
+#include <string>
 
 int main()
 {
 	int a, b;
+	std::string s = a + b;
 	return 0;
 }
