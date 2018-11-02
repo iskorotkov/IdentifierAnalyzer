@@ -14,10 +14,7 @@ int main()
 	std::vector<char> source;
 	while (getline(input, buffer))
 	{
-		for (const auto& c : buffer)
-		{
-			source.emplace_back(c);
-		}
+		source.insert(source.cend(), buffer.begin(), buffer.end());
 	}
 	block_analyzer a;
 	auto i = a.analyze(source.cbegin(), source.cend()).get_used_identifiers();
