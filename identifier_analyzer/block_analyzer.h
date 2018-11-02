@@ -4,9 +4,12 @@
 
 class block_analyzer : public analyzer<block_data>
 {
+	using c_iter = std::vector<char>::const_iterator;
 public:
-	block_data analyze(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end) override;
+	block_data analyze(const c_iter start, const c_iter end) override;
 
 private:
-	void analyze_line(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end);
+	void analyze_line(const c_iter start, const c_iter end);
+	bool is_member_declaration(const c_iter start, const c_iter end);
+	void analyze_member_declaration(const c_iter start, const c_iter end);
 };

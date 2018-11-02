@@ -3,7 +3,7 @@
 #include "block_data.h"
 #include "line_analyzer.h"
 
-block_data block_analyzer::analyze(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end)
+block_data block_analyzer::analyze(const c_iter start, const c_iter end)
 {
 	auto delimiter = start, it = start;
 	while (it < end)
@@ -22,9 +22,28 @@ block_data block_analyzer::analyze(const std::vector<char>::const_iterator start
 	return result;
 }
 
-void block_analyzer::analyze_line(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end)
+void block_analyzer::analyze_line(const c_iter start, const c_iter end)
 {
-	line_analyzer an;
-	auto line_result = an.analyze(start, end);
-	result.add_line_data(line_result);
+	if (is_member_declaration(start, end))
+	{
+		analyze_member_declaration(start, end);
+	}
+	else
+	{
+		line_analyzer an;
+		auto line_result = an.analyze(start, end);
+		result.add_line_data(line_result);
+	}
+}
+
+bool block_analyzer::is_member_declaration(const c_iter start, const c_iter end)
+{
+	// TODO: add member declaration analyzing
+	// Probably should create separate class for this
+	return false;
+}
+
+void block_analyzer::analyze_member_declaration(const c_iter start, const c_iter end)
+{
+	// TODO: add logic
 }
