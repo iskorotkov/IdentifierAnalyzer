@@ -17,8 +17,8 @@ private:
 	bool is_line_valid();
 
 	// TODO: end index, then start index. Misleading
-	void analyze_function_call(unsigned int end_index, unsigned int start_index = 2);
-	void analyze_assignment(unsigned int end_index, unsigned int start_index = 0);
+	void analyze_function_call(unsigned int start_index, unsigned int end_index);
+	void analyze_assignment(unsigned int start_index, unsigned int end_index);
 	void analyze_variable_introduction();
 	unsigned int find_next_separator(unsigned int start_index);
 	unsigned int find_function_call_end(unsigned int start_index);
@@ -26,4 +26,5 @@ private:
 	void add_word(const std::vector<char> v);
 	void add_word(const char& c);
 	inline char get_first_letter(unsigned int index) { return words.at(index)[0]; }
+	inline bool is_return_statement(std::string& word) { return word == "return"; }
 };

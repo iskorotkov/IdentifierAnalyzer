@@ -38,7 +38,7 @@ void line_analyzer::parse_line(const c_iter start, const c_iter end)
 	add_word(buffer);
 }
 
-void line_analyzer::analyze_assignment(unsigned int end_index, unsigned int start_index)
+void line_analyzer::analyze_assignment(unsigned int start_index, unsigned int end_index)
 {
 	unsigned int index = start_index;
 	while (index < end_index)
@@ -54,7 +54,7 @@ void line_analyzer::analyze_assignment(unsigned int end_index, unsigned int star
 			auto function_call_end = find_function_call_end(index);
 			if (function_call_end > index + 1)
 			{
-				analyze_function_call(function_call_end, index);
+				analyze_function_call(index, function_call_end);
 				index = function_call_end + 1;
 			}
 		}
@@ -76,11 +76,14 @@ void line_analyzer::analyze_variable_introduction()
 			auto next_separator = find_next_separator(index);
 			if (next_separator > index + 1)
 			{
-				analyze_assignment(next_separator, index - 1);
+				analyze_assignment(index - 1, next_separator);
 			}
 			else
 			{
-				result.add_used_variable(words.at(index - 1));
+				if (!is_return_statement(words.at(index - 1)))
+				{
+					result.add_used_variable(words.at(index - 1));
+				}
 			}
 
 			first_found = true;
@@ -96,7 +99,7 @@ void line_analyzer::analyze_variable_introduction()
 			auto next_separator = find_next_separator(index);
 			if (next_separator > index + 1)
 			{
-				analyze_assignment(next_separator, index);
+				analyze_assignment(index, next_separator);
 			}
 			else
 			{
@@ -163,11 +166,11 @@ void line_analyzer::choose_pattern()
 	auto index = find_first_special_symbol(0);
 	if (index == 1 && is_operator(get_first_letter(index)))
 	{
-		analyze_assignment(words.size());
+		analyze_assignment(0, words.size());
 	}
 	else if (index == 1 && is_opening_brace(get_first_letter(index)))
 	{
-		analyze_function_call(words.size());
+		analyze_function_call(2, words.size());
 	}
 	else
 	{
@@ -185,7 +188,7 @@ bool line_analyzer::is_line_valid()
 	return true;
 }
 
-void line_analyzer::analyze_function_call(unsigned int end_index, unsigned int start_index)
+void line_analyzer::analyze_function_call(unsigned int start_index, unsigned int end_index)
 {
 	unsigned int index = start_index;
 	while (index < end_index)
