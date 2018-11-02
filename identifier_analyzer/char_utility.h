@@ -8,3 +8,5 @@ bool is_whitespace(char c);
 bool is_operator(char c);
 bool is_opening_brace(char c);
 bool is_closing_brace(char c);
+bool is_hashtag(char c);
+bool is_slash(char c);

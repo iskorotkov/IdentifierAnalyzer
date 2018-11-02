@@ -121,6 +121,8 @@
   <ItemGroup>
     <ClCompile Include="block_data.cpp" />
     <ClCompile Include="char_utility.cpp" />
+    <ClCompile Include="file_analyzer.cpp" />
+    <ClCompile Include="file_data.cpp" />
     <ClCompile Include="io_utility.cpp" />
     <ClCompile Include="line_analyzer.cpp" />
     <ClCompile Include="main.cpp" />
@@ -131,6 +133,8 @@
     <ClInclude Include="block_data.h" />
     <ClInclude Include="char_utility.h" />
     <ClInclude Include="data.h" />
+    <ClInclude Include="file_analyzer.h" />
+    <ClInclude Include="file_data.h" />
     <ClInclude Include="io_exception.h" />
     <ClInclude Include="block_analyzer.h" />
     <ClInclude Include="io_utility.h" />

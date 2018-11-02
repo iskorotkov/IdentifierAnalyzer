@@ -64,3 +64,13 @@ bool is_closing_brace(char c)
 		|| c == '}'
 		|| c == '>';
 }
+
+bool is_hashtag(char c)
+{
+	return c == '#';
+}
+
+bool is_slash(char c)
+{
+	return c == '/';
+}

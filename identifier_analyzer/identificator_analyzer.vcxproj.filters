@@ -33,6 +33,12 @@
     <ClCompile Include="block_data.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="file_analyzer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="file_data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="io_exception.h">
@@ -60,6 +66,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="char_utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="file_analyzer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="file_data.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
