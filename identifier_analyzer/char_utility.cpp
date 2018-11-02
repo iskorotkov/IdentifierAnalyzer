@@ -27,7 +27,8 @@ bool is_separator(char c)
 		|| c == ';'
 		|| c == ','
 		|| c == '<'
-		|| c == '>';
+		|| c == '>'
+		|| c == ';';
 }
 
 bool is_whitespace(char c)
