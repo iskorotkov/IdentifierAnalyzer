@@ -23,7 +23,7 @@ file_data file_analyzer::analyze(std::string file_name)
 	return pass_to_analyze(start + 1, file_content.cend());
 }
 
-std::vector<char>::const_iterator file_analyzer::skip_comments_and_preprocessor_directives(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end)
+base_analyzer::c_iter file_analyzer::skip_comments_and_preprocessor_directives(const c_iter start, const c_iter end)
 {
 	auto it = start;
 	while (it < end && (is_slash(*it) || is_hashtag(*it)))
@@ -33,7 +33,7 @@ std::vector<char>::const_iterator file_analyzer::skip_comments_and_preprocessor_
 	return it;
 }
 
-file_data file_analyzer::pass_to_analyze(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end)
+file_data file_analyzer::pass_to_analyze(const c_iter start, const c_iter end)
 {
 	block_analyzer b;
 	auto r = b.analyze(start, end);
@@ -42,7 +42,7 @@ file_data file_analyzer::pass_to_analyze(const std::vector<char>::const_iterator
 	return result;
 }
 
-std::vector<char>::const_iterator file_analyzer::get_line_end(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end)
+base_analyzer::c_iter file_analyzer::get_line_end(const c_iter start, const c_iter end)
 {
 	auto it = start;
 	while (*it != '\n')

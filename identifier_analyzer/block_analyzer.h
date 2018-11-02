@@ -1,10 +1,9 @@
 #pragma once
 #include "block_data.h"
-#include "analyzer.h"
+#include "base_code_analyzer.h"
 
-class block_analyzer : public analyzer<block_data>
+class block_analyzer : public base_code_analyzer<block_data>
 {
-	using c_iter = std::vector<char>::const_iterator;
 public:
 	block_data analyze(const c_iter start, const c_iter end) override;
 
