@@ -14,6 +14,7 @@ private:
 
 	void parse_line(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end);
 	void choose_pattern();
+	bool is_line_valid();
 
 	// TODO: end index, then start index. Misleading
 	void analyze_function_call(unsigned int end_index, unsigned int start_index = 2);

@@ -8,10 +8,10 @@ block_data block_analyzer::analyze(const std::vector<char>::const_iterator start
 	auto delimiter = start, it = start;
 	while (it < end)
 	{
-		if (*it == '\n')
+		if (*it == '\n' && it > delimiter + 1)
 		{
 			analyze_line(delimiter, it);
-			delimiter = it;
+			delimiter = it + 1;
 		}
 		++it;
 	}

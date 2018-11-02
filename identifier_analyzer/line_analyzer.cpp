@@ -7,7 +7,10 @@
 line_data line_analyzer::analyze(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end)
 {
 	parse_line(start, end);
-	choose_pattern();
+	if (is_line_valid())
+	{
+		choose_pattern();
+	}
 	return result;
 }
 
@@ -170,6 +173,16 @@ void line_analyzer::choose_pattern()
 	{
 		analyze_variable_introduction();
 	}
+}
+
+bool line_analyzer::is_line_valid()
+{
+	if (words.size() < 2)
+	{
+		return false;
+	}
+
+	return true;
 }
 
 void line_analyzer::analyze_function_call(unsigned int end_index, unsigned int start_index)

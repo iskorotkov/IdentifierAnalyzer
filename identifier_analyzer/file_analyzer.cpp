@@ -17,9 +17,10 @@ file_data file_analyzer::analyze(std::string file_name)
 	while (getline(input, buffer))
 	{
 		file_content.insert(file_content.cend(), buffer.begin(), buffer.end());
+		file_content.emplace_back('\n');
 	}
 	auto start = skip_comments_and_preprocessor_directives(file_content.begin(), file_content.end());
-	return pass_to_analyze(start, file_content.cend());
+	return pass_to_analyze(start + 1, file_content.cend());
 }
 
 std::vector<char>::const_iterator file_analyzer::skip_comments_and_preprocessor_directives(const std::vector<char>::const_iterator start, const std::vector<char>::const_iterator end)
