@@ -1,9 +1,9 @@
 #pragma once
-#include "base_code_analyzer.h"
+#include "base_analyzer.h"
 #include "expression_data.h"
+#include <vector>
 
-class expression_analyzer :
-	public base_code_analyzer<expression_data>
+class expression_analyzer : public base_analyzer
 {
 public:
 	// TODO: create classes for each expression type (instead of using one)
@@ -16,12 +16,12 @@ public:
 		arithmetic_expression
 	};
 
-	expression_analyzer(expression_type type) : type(type) {}
+	expression_analyzer(expression_type type, cstring_iter start, cstring_iter end) : type(type), start(start), end(end) {}
 
 private:
 	expression_type type;
-	c_iter start;
-	c_iter end;
+	cstring_iter start;
+	cstring_iter end;
 
 	void analyze_variable_introduction();
 	void analyze_assignment();

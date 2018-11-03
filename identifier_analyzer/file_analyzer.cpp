@@ -23,7 +23,7 @@ file_data file_analyzer::analyze(std::string file_name)
 	return pass_to_analyze(start + 1, file_content.cend());
 }
 
-base_analyzer::c_iter file_analyzer::skip_file_header(const c_iter start, const c_iter end)
+base_analyzer::cchar_iter file_analyzer::skip_file_header(const cchar_iter start, const cchar_iter end)
 {
 	auto line_start = start;
 	auto it = get_line_end(start, end);
@@ -36,7 +36,7 @@ base_analyzer::c_iter file_analyzer::skip_file_header(const c_iter start, const 
 	return line_start;
 }
 
-file_data file_analyzer::pass_to_analyze(const c_iter start, const c_iter end)
+file_data file_analyzer::pass_to_analyze(const cchar_iter start, const cchar_iter end)
 {
 	block_analyzer b;
 	auto r = b.analyze(start, end);
@@ -45,7 +45,7 @@ file_data file_analyzer::pass_to_analyze(const c_iter start, const c_iter end)
 	return result;
 }
 
-bool file_analyzer::is_blank_line(c_iter start, c_iter end)
+bool file_analyzer::is_blank_line(cchar_iter start, cchar_iter end)
 {
 	if (start + 1 >= end)
 	{
@@ -61,7 +61,7 @@ bool file_analyzer::is_blank_line(c_iter start, c_iter end)
 	return true;
 }
 
-base_analyzer::c_iter file_analyzer::get_line_end(const c_iter start, const c_iter end)
+base_analyzer::cchar_iter file_analyzer::get_line_end(const cchar_iter start, const cchar_iter end)
 {
 	auto it = start;
 	while (*it != '\n')

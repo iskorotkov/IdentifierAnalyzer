@@ -10,8 +10,8 @@ public:
 private:
 	std::vector<char> file_content;
 
-	c_iter get_line_end(const c_iter start, const c_iter end);
-	c_iter skip_file_header(const c_iter start, const c_iter end);
-	file_data pass_to_analyze(const c_iter start, const c_iter end);
-	bool is_blank_line(c_iter start, c_iter end);
+	cchar_iter get_line_end(const cchar_iter start, const cchar_iter end);
+	cchar_iter skip_file_header(const cchar_iter start, const cchar_iter end);
+	file_data pass_to_analyze(const cchar_iter start, const cchar_iter end);
+	bool is_blank_line(cchar_iter start, cchar_iter end);
 };

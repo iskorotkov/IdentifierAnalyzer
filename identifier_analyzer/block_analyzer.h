@@ -1,14 +1,16 @@
 #pragma once
 #include "block_data.h"
-#include "base_code_analyzer.h"
+#include "base_analyzer.h"
 
-class block_analyzer : public base_code_analyzer<block_data>
+class block_analyzer : public base_analyzer
 {
 public:
-	block_data analyze(const c_iter start, const c_iter end) override;
+	block_data analyze(const cchar_iter start, const cchar_iter end);
 
 private:
-	void analyze_line(const c_iter start, const c_iter end);
-	bool is_member_declaration(const c_iter start, const c_iter end);
-	void analyze_member_declaration(const c_iter start, const c_iter end);
+	block_data result;
+
+	void analyze_line(const cchar_iter start, const cchar_iter end);
+	bool is_member_declaration(const cchar_iter start, const cchar_iter end);
+	void analyze_member_declaration(const cchar_iter start, const cchar_iter end);
 };

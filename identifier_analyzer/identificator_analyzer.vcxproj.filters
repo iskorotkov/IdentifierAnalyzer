@@ -77,9 +77,6 @@
     <ClInclude Include="file_data.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="base_code_analyzer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="base_analyzer.h">
       <Filter>Header Files</Filter>
     </ClInclude>

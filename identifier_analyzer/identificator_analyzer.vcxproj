@@ -132,7 +132,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base_analyzer.h" />
-    <ClInclude Include="base_code_analyzer.h" />
     <ClInclude Include="block_data.h" />
     <ClInclude Include="char_utility.h" />
     <ClInclude Include="data.h" />

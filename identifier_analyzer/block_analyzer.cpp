@@ -3,7 +3,7 @@
 #include "block_data.h"
 #include "line_analyzer.h"
 
-block_data block_analyzer::analyze(const c_iter start, const c_iter end)
+block_data block_analyzer::analyze(const cchar_iter start, const cchar_iter end)
 {
 	auto delimiter = start, it = start;
 	while (it < end)
@@ -22,7 +22,7 @@ block_data block_analyzer::analyze(const c_iter start, const c_iter end)
 	return result;
 }
 
-void block_analyzer::analyze_line(const c_iter start, const c_iter end)
+void block_analyzer::analyze_line(const cchar_iter start, const cchar_iter end)
 {
 	if (is_member_declaration(start, end))
 	{
@@ -36,14 +36,14 @@ void block_analyzer::analyze_line(const c_iter start, const c_iter end)
 	}
 }
 
-bool block_analyzer::is_member_declaration(const c_iter start, const c_iter end)
+bool block_analyzer::is_member_declaration(const cchar_iter start, const cchar_iter end)
 {
 	// TODO: add member declaration analyzing
 	// Probably should create separate class for this
 	return false;
 }
 
-void block_analyzer::analyze_member_declaration(const c_iter start, const c_iter end)
+void block_analyzer::analyze_member_declaration(const cchar_iter start, const cchar_iter end)
 {
 	// TODO: add logic
 }

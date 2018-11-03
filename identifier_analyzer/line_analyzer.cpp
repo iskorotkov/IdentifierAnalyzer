@@ -4,7 +4,7 @@
 #include "data.h"
 #include "char_utility.h"
 
-line_data line_analyzer::analyze(const c_iter start, const c_iter end)
+line_data line_analyzer::analyze(const cchar_iter start, const cchar_iter end)
 {
 	parse_line(start, end);
 	if (is_line_valid())
@@ -14,7 +14,7 @@ line_data line_analyzer::analyze(const c_iter start, const c_iter end)
 	return result;
 }
 
-void line_analyzer::parse_line(const c_iter start, const c_iter end)
+void line_analyzer::parse_line(const cchar_iter start, const cchar_iter end)
 {
 	std::vector<char> buffer;
 	for (auto c = start; c < end; ++c)

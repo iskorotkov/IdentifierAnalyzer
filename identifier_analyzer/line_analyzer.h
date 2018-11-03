@@ -1,18 +1,19 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "base_code_analyzer.h"
+#include "base_analyzer.h"
 #include "line_data.h"
 
-class line_analyzer : public base_code_analyzer<line_data>
+class line_analyzer : public base_analyzer
 {
 public:
-	virtual line_data analyze(const c_iter start, const c_iter end) override;
+	line_data analyze(const cchar_iter start, const cchar_iter end);
 
 private:
 	std::vector<std::string> words;
+	line_data result;
 
-	void parse_line(const c_iter start, const c_iter end);
+	void parse_line(const cchar_iter start, const cchar_iter end);
 	void choose_pattern();
 	bool is_line_valid();
 
