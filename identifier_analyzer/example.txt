@@ -1,11 +1,15 @@
 // Code created by Ivan
    
 #include <iostream>
-#include <string>
+#include <vector>
+
+using namespace std;
 
 int main()
 {
-	int a, b;
-	std::string s = a + b;
+	int n;
+	cin >> a >> b;
+	cout << a + b;
+	vector<char> word;
 	return 0;
 }

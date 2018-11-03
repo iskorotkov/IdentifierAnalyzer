@@ -39,6 +39,12 @@
     <ClCompile Include="file_data.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="expression_analyzer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="line_data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="io_exception.h">
@@ -75,6 +81,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="base_analyzer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="expression_analyzer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="expression_data.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

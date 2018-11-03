@@ -19,7 +19,7 @@ void line_analyzer::parse_line(const c_iter start, const c_iter end)
 	std::vector<char> buffer;
 	for (auto c = start; c < end; ++c)
 	{
-		if (is_separator(*c) || is_operator(*c))
+		if (is_separator(*c))
 		{
 			add_word(buffer);
 			add_word(*c);

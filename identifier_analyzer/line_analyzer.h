@@ -26,5 +26,9 @@ private:
 	void add_word(const std::vector<char> v);
 	void add_word(const char& c);
 	inline char get_first_letter(unsigned int index) { return words.at(index)[0]; }
+
 	inline bool is_return_statement(std::string& word) { return word == "return"; }
+	inline bool is_return_statement() { return words.at(0) == "return"; }
+	inline bool is_using_directive() { return words.at(0) == "using"; }
+	inline bool is_typedef() { return words.at(0) == "typedef"; }
 };
