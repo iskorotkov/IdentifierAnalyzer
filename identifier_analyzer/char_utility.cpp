@@ -51,18 +51,12 @@ bool is_operator(char c)
 
 bool is_opening_brace(char c)
 {
-	return c == '('
-		|| c == '['
-		|| c == '{'
-		|| c == '<';
+	return c == '(';
 }
 
 bool is_closing_brace(char c)
 {
-	return c == ')'
-		|| c == ']'
-		|| c == '}'
-		|| c == '>';
+	return c == ')';
 }
 
 bool is_hashtag(char c)
