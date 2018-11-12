@@ -124,6 +124,7 @@
     <ClCompile Include="parse_result_writer.cpp" />
     <ClCompile Include="reserved_words_dictionary.cpp" />
     <ClCompile Include="word_filter.cpp" />
+    <ClCompile Include="word_parser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="example.txt" />
@@ -135,6 +136,7 @@
     <ClInclude Include="parse_result_writer.h" />
     <ClInclude Include="reserved_words_dictionary.h" />
     <ClInclude Include="word_filter.h" />
+    <ClInclude Include="word_parser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

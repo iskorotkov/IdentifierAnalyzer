@@ -1,9 +1,26 @@
 #include "file_parser.h"
 #include <fstream>
+#include <sstream>
+#include <string>
 
 file_parser::file_parser(std::string file_name)
 {
 	parse_file(file_name);
+}
+
+void file_parser::add_words(std::set<std::string> words)
+{
+	for (auto& word : words)
+	{
+		if (dictionary.is_reserved_word(word))
+		{
+			add_reserved_word(word);
+		}
+		else
+		{
+			add_user_defined_word(word);
+		}
+	}
 }
 
 void file_parser::parse_file(std::string file_name)
@@ -11,19 +28,23 @@ void file_parser::parse_file(std::string file_name)
 	std::ifstream stream(file_name);
 
 	std::string buffer;
+	while (getline(stream, buffer))
+	{
+		parse_line(buffer);
+	}
+}
+
+void file_parser::parse_line(std::string line)
+{
+	if (!line.empty() && line[0] == '#')
+	{
+		return;
+	}
+	std::istringstream stream(line);
+	std::string buffer;
 	while (stream >> buffer)
 	{
-		if (!filter.is_valid_word(buffer))
-		{
-			continue;
-		}
-		if (dictionary.is_reserved_word(buffer))
-		{
-			add_reserved_word(buffer);
-		}
-		else
-		{
-			add_user_defined_word(buffer);
-		}
+		auto result = parser.parse_word(buffer);
+		add_words(result);
 	}
 }

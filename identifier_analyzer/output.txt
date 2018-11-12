@@ -1,4 +1,11 @@
 int 2
+std 2
 double 1
+main 1
 namespace 1
+s 1
+string 1
 using 1
+var1 1
+var2 1
+var3 1
