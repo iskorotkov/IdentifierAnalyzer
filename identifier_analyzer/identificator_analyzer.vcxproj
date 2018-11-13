@@ -119,6 +119,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="examples\Array43.cpp" />
+    <Text Include="examples\For29.cpp" />
+    <Text Include="examples\Massiv5.cpp" />
+    <Text Include="examples\One32.cpp" />
+    <Text Include="examples\Proc15.cpp" />
+    <Text Include="examples\Proc36.cpp" />
+    <Text Include="examples\Proc42.cpp" />
+    <Text Include="examples\Reccur12.cpp" />
+    <Text Include="examples\Reccur5.cpp" />
+    <Text Include="examples\Recur11.cpp" />
+    <Text Include="examples\Series16.cpp" />
+    <Text Include="examples\Series35.cpp" />
+    <Text Include="examples\TextFile9.cpp" />
+    <Text Include="examples\TheMassiv17.cpp" />
+    <Text Include="examples\TheMassiv18.cpp" />
+    <Text Include="examples\TheMassiv26.cpp" />
+    <Text Include="examples\TheMassiv30.cpp" />
+    <Text Include="examples\TheTri4.cpp" />
+    <Text Include="examples\TheTri8.cpp" />
+    <Text Include="examples\TheTwo1.cpp" />
+    <Text Include="examples\TheTwo14.cpp" />
+    <Text Include="examples\TheTwo23.cpp" />
+    <Text Include="examples\TheTwo6.cpp" />
+    <Text Include="examples\Tri10.cpp" />
+    <Text Include="examples\Tri17.cpp" />
+    <Text Include="examples\Two11.cpp" />
+    <Text Include="examples\Two20.cpp" />
+    <Text Include="examples\Two5.cpp" />
+    <Text Include="examples\While18.cpp" />
     <ClCompile Include="file_parser.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="parse_result_writer.cpp" />
@@ -127,7 +156,7 @@
     <ClCompile Include="word_parser.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="example.txt" />
+    <Text Include="input.txt" />
     <Text Include="output.txt" />
   </ItemGroup>
   <ItemGroup>

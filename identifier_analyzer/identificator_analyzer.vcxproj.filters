@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\examples">
+      <UniqueIdentifier>{ec7df533-7869-48c3-a00d-64cc759a23a2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -35,11 +38,98 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="example.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
     <Text Include="output.txt">
       <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="examples\Array43.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\For29.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\Massiv5.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\One32.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\Proc15.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\Proc36.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\Proc42.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\Reccur5.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\Reccur12.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\Recur11.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\Series16.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\Series35.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\TextFile9.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\TheMassiv17.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\TheMassiv18.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\TheMassiv26.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\TheMassiv30.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\TheTri4.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\TheTri8.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\TheTwo1.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\TheTwo6.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\TheTwo14.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\TheTwo23.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\Tri10.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\Tri17.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\Two5.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\Two11.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\Two20.cpp">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\While18.cpp">
+      <Filter>Resource Files\examples</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>
