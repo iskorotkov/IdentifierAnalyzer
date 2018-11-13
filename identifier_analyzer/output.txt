@@ -1,8 +1,11 @@
 int 2
 std 2
+PI 1
 double 1
 main 1
+minus 1
 namespace 1
+plus 1
 s 1
 string 1
 using 1

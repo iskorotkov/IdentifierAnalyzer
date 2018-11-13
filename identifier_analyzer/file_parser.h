@@ -25,4 +25,5 @@ private:
 
 	void parse_file(std::string file_name);
 	void parse_line(std::string line);
+	void parse_preprocessor_directive(std::string line);
 };

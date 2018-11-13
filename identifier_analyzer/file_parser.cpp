@@ -38,10 +38,27 @@ void file_parser::parse_line(std::string line)
 {
 	if (!line.empty() && line[0] == '#')
 	{
+		parse_preprocessor_directive(line);
 		return;
 	}
 	std::istringstream stream(line);
 	std::string buffer;
+	while (stream >> buffer)
+	{
+		auto result = parser.parse_word(buffer);
+		add_words(result);
+	}
+}
+
+void file_parser::parse_preprocessor_directive(std::string line)
+{
+	std::istringstream stream(line);
+	std::string buffer;
+	stream >> buffer;
+	if (buffer != "#define")
+	{
+		return;
+	}
 	while (stream >> buffer)
 	{
 		auto result = parser.parse_word(buffer);
