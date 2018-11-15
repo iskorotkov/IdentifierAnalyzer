@@ -30,7 +30,7 @@ std::set<std::string> word_parser::parse_word(const std::string& word) const
 			ignore_next_word = true;
 		}
 	}
-	if (!ignore_next_word && !buffer.empty())
+	if (!ignore_next_word && !buffer.empty() && filter.is_valid_word(buffer))
 	{
 		result.emplace(buffer);
 	}

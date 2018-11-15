@@ -18,6 +18,8 @@ int main()
 	delete[] array; // a b c d
 	/* actual code */
 
+	int 2x2 = 0;
+
 	string* strings = new string[count];
 	string& s = string[0];
 
