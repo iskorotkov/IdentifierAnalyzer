@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "file_parser.h"
 #include "parse_result_writer.h"
 
@@ -9,14 +10,14 @@ int main()
 
 	std::string buffer;
 	std::cout << "Input file (leave empty for default): ";
-	std::cin >> buffer;
+	getline(std::cin, buffer);
 	if (!buffer.empty())
 	{
 		input = buffer;
 		buffer.clear();
 	}
 	std::cout << "Output file (leave empty for default): ";
-	std::cin >> buffer;
+	getline(std::cin, buffer);
 	if (!buffer.empty())
 	{
 		output = buffer;

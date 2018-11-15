@@ -15,7 +15,8 @@ int main()
 
 	int* array = new int[n];
 	array[0] = 0;
-	delete[] array;
+	delete[] array; // a b c d
+	/* actual code */
 
 	string* strings = new string[count];
 	string& s = string[0];

@@ -6,6 +6,7 @@ var1 2
 var2 2
 PI 1
 count 1
+d 1
 main 1
 minus 1
 n 1

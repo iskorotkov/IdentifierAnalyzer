@@ -2,7 +2,6 @@
 #include <string>
 #include "parse_result.h"
 #include "reserved_words_dictionary.h"
-#include "word_filter.h"
 #include "word_parser.h"
 
 class file_parser
@@ -18,6 +17,7 @@ private:
 	parse_result user_defined_words;
 	reserved_words_dictionary dictionary;
 	word_parser parser;
+	bool is_commented_out = false;
 
 	void add_words(std::set<std::string> words);
 	void add_reserved_word(std::string word) { reserved_words.add_used_identifier(word); }
@@ -26,4 +26,9 @@ private:
 	void parse_file(std::string file_name);
 	void parse_line(std::string line);
 	void parse_preprocessor_directive(std::string line);
+	void remove_singleline_comments(std::string& line);
+	void remove_multiline_comment(std::string& line);
+	void erase_content(std::string::iterator begin, std::string::iterator end) const;
+
+	std::string::iterator find_string_literal_end(std::string::iterator begin, std::string::iterator end) const;
 };
