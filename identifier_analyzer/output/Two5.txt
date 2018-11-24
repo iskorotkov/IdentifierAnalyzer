@@ -1,0 +1,8 @@
+num 7
+a 4
+b 3
+result 3
+pt 2
+Solve 1
+Task 1
+std 1

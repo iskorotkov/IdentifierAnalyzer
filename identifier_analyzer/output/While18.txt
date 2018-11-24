@@ -1,0 +1,7 @@
+n 5
+count 3
+sum 3
+pt 2
+Solve 1
+Task 1
+std 1

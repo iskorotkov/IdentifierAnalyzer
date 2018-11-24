@@ -1,0 +1,10 @@
+a 5
+n 4
+b 3
+elem 3
+i 3
+pt 3
+size 3
+Solve 1
+Task 1
+std 1

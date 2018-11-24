@@ -1,0 +1,16 @@
+i 12
+n 9
+k 7
+l 7
+array 5
+amount 4
+left 4
+result 4
+right 4
+a 3
+pt 3
+count 2
+fill_array 2
+Solve 1
+Task 1
+std 1

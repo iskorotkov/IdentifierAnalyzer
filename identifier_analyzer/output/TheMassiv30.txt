@@ -1,0 +1,9 @@
+it 8
+a 5
+n 5
+i 4
+pt 4
+count 3
+Solve 1
+Task 1
+std 1

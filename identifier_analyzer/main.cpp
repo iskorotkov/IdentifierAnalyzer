@@ -23,8 +23,9 @@ int main()
 		output = buffer;
 	}
 
-	file_parser parser(input);
+	// TODO: will cause errors with absolute paths!
+	file_parser parser("input/" + input);
 	auto result = parser.get_user_defined_words();
 	parse_result_writer writer;
-	writer.write_result(result, output);
+	writer.write_result(result, "output/" + output);
 }

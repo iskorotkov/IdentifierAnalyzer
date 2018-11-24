@@ -1,0 +1,11 @@
+n 9
+a 8
+j 4
+MaxElem 3
+cur_value 3
+i 3
+pt 3
+rec_value 3
+Solve 1
+Task 1
+std 1

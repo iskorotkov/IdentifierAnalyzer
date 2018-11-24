@@ -1,0 +1,8 @@
+i 9
+n 7
+numbers 7
+Fib 2
+pt 2
+Solve 1
+Task 1
+std 1

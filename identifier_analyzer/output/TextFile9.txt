@@ -1,0 +1,16 @@
+i 6
+contains 4
+n 4
+num 4
+a 3
+b 3
+contains_digit 2
+current_digit 2
+digit 2
+output 2
+Solve 1
+Task 1
+endl 1
+ofstream 1
+pt 1
+std 1

@@ -1,0 +1,8 @@
+num 5
+i 3
+k 3
+pt 3
+result 3
+Solve 1
+Task 1
+std 1

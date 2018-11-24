@@ -1,0 +1,9 @@
+num 8
+base 3
+order 3
+result 3
+convert 2
+pt 2
+Solve 1
+Task 1
+std 1

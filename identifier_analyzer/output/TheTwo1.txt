@@ -1,0 +1,14 @@
+n 5
+i 4
+j 4
+k 4
+sum1 4
+sum2 4
+sum3 3
+assert 2
+e 2
+pt 2
+Solve 1
+Task 1
+r 1
+std 1

@@ -1,0 +1,12 @@
+i 5
+num 4
+reversed_num 4
+a 3
+b 3
+counter 3
+original_num 3
+pt 3
+is_palindrome 2
+Solve 1
+Task 1
+std 1

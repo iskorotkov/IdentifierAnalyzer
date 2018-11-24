@@ -1,0 +1,8 @@
+n 9
+result 8
+digit_root 2
+digit_sum 2
+pt 2
+Solve 1
+Task 1
+std 1
