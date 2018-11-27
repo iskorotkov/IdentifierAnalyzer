@@ -153,10 +153,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="file_reader_tests.cpp" />
+    <ClCompile Include="user_defined_identifiers_tests.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\identificator_analyzer\identificator_analyzer.vcxproj">
+    <Text Include="examples\test1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\identifier_analyzer\identificator_analyzer.vcxproj">
       <Project>{d72ebce5-448b-4f1a-b6e2-d9cac10a6719}</Project>
     </ProjectReference>
   </ItemGroup>
