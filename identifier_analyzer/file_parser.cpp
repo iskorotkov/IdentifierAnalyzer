@@ -8,22 +8,22 @@ file_parser::file_parser(std::string file_name)
 	parse_file(file_name);
 }
 
-void file_parser::add_words(std::set<std::string> words)
+void file_parser::add_words(std::map<std::string, int> words)
 {
 	for (auto& word : words)
 	{
-		if (dictionary.is_reserved_word(word))
+		if (dictionary.is_reserved_word(word.first))
 		{
-			add_reserved_word(word);
+			add_reserved_word(word.first, word.second);
 		}
 		else
 		{
-			add_user_defined_word(word);
+			add_user_defined_word(word.first, word.second);
 		}
 	}
 }
 
-void file_parser::parse_file(std::string file_name)
+void file_parser::parse_file(const std::string& file_name)
 {
 	std::ifstream stream(file_name);
 
@@ -34,7 +34,7 @@ void file_parser::parse_file(std::string file_name)
 	}
 }
 
-void file_parser::parse_line(std::string line)
+void file_parser::parse_line(std::string& line)
 {
 	if (line.empty())
 	{

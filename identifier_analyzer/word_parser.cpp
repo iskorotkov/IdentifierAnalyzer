@@ -1,38 +1,29 @@
 #include "word_parser.h"
 
-std::set<std::string> word_parser::parse_word(const std::string& word) const
+std::map<std::string, int> word_parser::parse_word(const std::string& word) const
 {
-	std::set<std::string> result;
+	std::map<std::string, int> result;
 
 	std::string buffer;
-	bool ignore_next_word = false;
 	for (auto c : word)
 	{
-		if (buffer.empty() && filter.is_valid_character(c)
-			|| filter.is_valid_character(c))
+		if (buffer.empty() && filter.is_valid_first_character(c)
+			|| !buffer.empty() && filter.is_valid_character(c))
 		{
 			buffer.push_back(c);
 		}
-		else if (filter.is_separator(c))
+		else if (!filter.is_valid_character(c))
 		{
-			if (!ignore_next_word)
+			if (filter.is_valid_word(buffer))
 			{
-				if (filter.is_valid_word(buffer))
-				{
-					result.emplace(buffer);
-				}
-				buffer.clear();
-				ignore_next_word = false;
+				++result[buffer];
 			}
-		}
-		else
-		{
-			ignore_next_word = true;
+			buffer.clear();
 		}
 	}
-	if (!ignore_next_word && !buffer.empty() && filter.is_valid_word(buffer))
+	if (filter.is_valid_word(buffer))
 	{
-		result.emplace(buffer);
+		++result[buffer];
 	}
 
 	return result;

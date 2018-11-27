@@ -1,6 +1,6 @@
 #include "word_filter.h"
 
-bool word_filter::is_valid_word(std::string word) const
+bool word_filter::is_valid_word(const std::string& word) const
 {
 	bool valid_length = is_valid_length(word);
 	bool valid_first_character = is_valid_first_character(word);
@@ -18,7 +18,7 @@ bool word_filter::is_valid_word(std::string word) const
 	return true;
 }
 
-bool word_filter::is_valid_first_character(std::string word) const
+bool word_filter::is_valid_first_character(const std::string& word) const
 {
 	return !word.empty() && is_valid_first_character(word[0]);
 }
