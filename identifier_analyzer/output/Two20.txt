@@ -1,7 +1,0 @@
-max_digit 5
-n 5
-digit 3
-pt 2
-Solve 1
-Task 1
-std 1

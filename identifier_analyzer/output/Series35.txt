@@ -1,9 +1,0 @@
-pt 5
-num 4
-count 3
-count_all 3
-i 3
-k 3
-Solve 1
-Task 1
-std 1

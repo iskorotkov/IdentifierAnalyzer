@@ -13,12 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Resource Files\input">
-      <UniqueIdentifier>{7e35b2c7-b397-461e-bfae-9b42e4ab7082}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\output">
-      <UniqueIdentifier>{d42a9155-d31c-4a50-986b-61739e22b072}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -41,188 +35,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="input\input.txt">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\Array43.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\For29.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\Massiv5.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\One32.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\Proc15.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\Proc36.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\Proc42.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\Reccur5.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\Reccur11.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\Reccur12.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\Series16.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\Series35.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\TextFile9.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\TheMassiv17.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\TheMassiv18.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\TheMassiv26.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\TheMassiv30.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\TheTri4.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\TheTri8.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\TheTwo1.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\TheTwo6.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\TheTwo14.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\TheTwo23.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\Tri10.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\Tri17.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\Two5.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\Two11.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\Two20.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="input\While18.cpp">
-      <Filter>Resource Files\input</Filter>
-    </Text>
-    <Text Include="output\Array43.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\For29.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\Massiv5.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\One32.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\output.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\Proc15.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\Proc36.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\Proc42.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\Reccur5.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\Reccur11.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\Reccur12.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\Series16.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\Series35.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\TextFile9.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\TheMassiv17.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\TheMassiv18.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\TheMassiv26.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\TheMassiv30.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\TheTri4.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\TheTri8.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\TheTwo1.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\TheTwo6.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\TheTwo14.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\TheTwo23.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\Tri10.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\Tri17.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\Two5.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\Two11.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\Two20.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-    <Text Include="output\While18.txt">
-      <Filter>Resource Files\output</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="reserved_words_dictionary.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -241,5 +53,13 @@
     <ClInclude Include="word_parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="output.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

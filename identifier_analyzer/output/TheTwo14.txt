@@ -1,9 +1,0 @@
-i 5
-n 4
-j 3
-power 3
-result 3
-pt 2
-Solve 1
-Task 1
-std 1

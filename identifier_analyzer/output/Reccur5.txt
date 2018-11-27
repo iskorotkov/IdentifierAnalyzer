@@ -1,7 +1,0 @@
-n 8
-min_digit 3
-pt 2
-Solve 1
-Task 1
-min 1
-std 1

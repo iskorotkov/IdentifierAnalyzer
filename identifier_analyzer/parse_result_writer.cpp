@@ -1,7 +1,8 @@
 #include "parse_result_writer.h"
 #include "parse_result.h"
 #include <map>
-#include <ostream>
+#include <fstream>
+#include <iomanip>
 
 void parse_result_writer::write_result(const parse_result& result, std::string file_name) const
 {
@@ -31,7 +32,7 @@ std::map<std::string, int>::const_iterator parse_result_writer::get_most_frequen
 
 void parse_result_writer::write_pair(const std::pair<const std::string, int>& p, std::ofstream& stream) const
 {
-	stream << p.first << " " << p.second;
+	stream << std::setw(10) << p.first << std::setw(5) << p.second;
 }
 
 std::ostream& operator<<(std::ostream& stream, const std::string s)

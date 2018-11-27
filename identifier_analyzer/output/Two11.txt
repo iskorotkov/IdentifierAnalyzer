@@ -1,7 +1,0 @@
-m 4
-fact 3
-n 3
-pt 2
-Solve 1
-Task 1
-std 1

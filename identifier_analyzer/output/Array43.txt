@@ -1,8 +1,0 @@
-i 9
-array 5
-n 5
-count 3
-pt 3
-Solve 1
-Task 1
-std 1

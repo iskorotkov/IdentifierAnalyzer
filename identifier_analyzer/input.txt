@@ -1,0 +1,7 @@
+
+const b=100;
+
+int main() {
+	int a[]= {b,b};
+	return a;
+}
