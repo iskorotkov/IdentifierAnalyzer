@@ -1,11 +1,12 @@
 #pragma once
 #include "parse_result.h"
 #include <fstream>
+#include <map>
 
 class parse_result_writer
 {
 public:
-	void write_result(const parse_result& result, std::string file_name) const;
+	void write_result(std::map<std::string, int> result, std::string file_name) const;
 
 private:
 	const int word_column_size = 15;

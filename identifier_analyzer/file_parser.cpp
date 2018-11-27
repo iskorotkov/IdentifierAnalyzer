@@ -8,7 +8,7 @@ file_parser::file_parser(std::string file_name)
 	parse_file(file_name);
 }
 
-void file_parser::add_words(std::map<std::string, int> words)
+void file_parser::add_words(const std::map<std::string, int>& words)
 {
 	for (auto& word : words)
 	{

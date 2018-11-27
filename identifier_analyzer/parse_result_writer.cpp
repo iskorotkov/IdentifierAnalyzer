@@ -4,10 +4,9 @@
 #include <fstream>
 #include <iomanip>
 
-void parse_result_writer::write_result(const parse_result& result, std::string file_name) const
+void parse_result_writer::write_result(std::map<std::string, int> parsed_words, std::string file_name) const
 {
 	std::ofstream stream(file_name);
-	auto parsed_words = result.get_used_identifiers();
 	while (!parsed_words.empty())
 	{
 		auto it = get_most_frequent_word(parsed_words);
