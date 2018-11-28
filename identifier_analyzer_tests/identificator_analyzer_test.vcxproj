@@ -157,6 +157,13 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="examples\test1.txt" />
+    <Text Include="examples\test2.txt" />
+    <Text Include="examples\test3.txt" />
+    <Text Include="examples\test4.txt" />
+    <Text Include="examples\test5.txt" />
+    <Text Include="examples\test6.txt" />
+    <Text Include="examples\test7.txt" />
+    <Text Include="examples\test8.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\identifier_analyzer\identificator_analyzer.vcxproj">
