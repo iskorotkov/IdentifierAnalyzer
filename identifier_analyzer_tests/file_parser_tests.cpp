@@ -513,4 +513,21 @@ namespace file_parser_tests {
 			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
 		}
 	};
+
+	TEST_CLASS(variable_name_restrictiona)
+	{
+	public:
+		TEST_METHOD(long_names)
+		{
+			std::map<std::string, int> result =
+			{
+				{ "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 1 },
+				{ "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", 1 },
+				{ "length255", 1 },
+				{ "length256", 1 },
+				{ "length257", 1 },
+			};
+			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
+		}
+	};
 }

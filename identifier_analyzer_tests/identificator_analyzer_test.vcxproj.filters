@@ -135,6 +135,9 @@
     <Text Include="examples\class1.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
+    <Text Include="examples\long_names.txt">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="file_parser_tests.cpp">

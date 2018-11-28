@@ -153,6 +153,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="examples\long_names.txt" />
     <Text Include="examples\while_loop.txt" />
     <ClCompile Include="file_parser_tests.cpp" />
     <Text Include="examples\class1.txt" />
