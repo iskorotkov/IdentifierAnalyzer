@@ -1,0 +1,1 @@
+auto o = new object<map<string,int>,int,0,bool>;

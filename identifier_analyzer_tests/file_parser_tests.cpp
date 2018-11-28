@@ -10,7 +10,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 const std::string path_to_folder = "D:/Projects/identifier_analyzer/identifier_analyzer_tests/examples/";
 
-namespace user_defined_identifiers {
+namespace file_parser_tests {
 	TEST_CLASS(single_expression)
 	{
 	public:
@@ -169,6 +169,20 @@ namespace user_defined_identifiers {
 				{ "stream", 1 },
 				{ "string", 1 },
 				{ "iostream", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(function1)
+		{
+			file_parser parser(path_to_folder + "test38.txt");
+			std::map<std::string, int> result =
+			{
+				{ "a", 1 },
+				{ "b", 1 },
+				{ "string", 1 },
+				{ "ptr", 1 },
+				{ "get", 1 },
 			};
 			Assert::IsTrue(parser.get_user_defined_words() == result);
 		}
@@ -398,19 +412,134 @@ namespace user_defined_identifiers {
 		}
 	};
 
-	TEST_CLASS(programs)
+	TEST_CLASS(complex_expressions)
 	{
 	public:
-		TEST_METHOD(two_ternary_operators)
+		TEST_METHOD(math_expression)
 		{
-			file_parser parser(path_to_folder + "test29.txt");
+			file_parser parser(path_to_folder + "test31.txt");
+			std::map<std::string, int> result =
+			{
+				{ "std", 1 },
+				{ "string", 1 },
+				{ "a", 2 },
+				{ "b", 1 },
+				{ "c", 1 },
+				{ "d", 3 },
+				{ "f", 4 },
+				{ "s", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(nested_function_calls)
+		{
+			file_parser parser(path_to_folder + "test32.txt");
 			std::map<std::string, int> result =
 			{
 				{ "a", 1 },
-				{ "b", 1 },
+				{ "b", 2 },
 				{ "c", 1 },
 				{ "d", 1 },
 				{ "e", 1 },
+				{ "f", 1 },
+				{ "g", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+	};
+
+	TEST_CLASS(templates)
+	{
+	public:
+		TEST_METHOD(template_type_instantiation)
+		{
+			file_parser parser(path_to_folder + "test33.txt");
+			std::map<std::string, int> result =
+			{
+				{ "vector", 1 },
+				{ "map", 1 },
+				{ "string", 1 },
+				{ "a", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(template_function_instantiation)
+		{
+			file_parser parser(path_to_folder + "test34.txt");
+			std::map<std::string, int> result =
+			{
+				{ "make_shared", 1 },
+				{ "map", 1 },
+				{ "string", 1 },
+				{ "a", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(template_object_creation)
+		{
+			file_parser parser(path_to_folder + "test35.txt");
+			std::map<std::string, int> result =
+			{
+				{ "o", 1 },
+				{ "object", 1 },
+				{ "string", 1 },
+				{ "map", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(template_type_declaration)
+		{
+			file_parser parser(path_to_folder + "test36.txt");
+			std::map<std::string, int> result =
+			{
+				{ "T", 2 },
+				{ "Y", 2 },
+				{ "V", 2 },
+				{ "c", 1 },
+				{ "other", 1 },
+				{ "var1", 1 },
+				{ "get", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(template_function_declaration)
+		{
+			file_parser parser(path_to_folder + "test37.txt");
+			std::map<std::string, int> result =
+			{
+				{ "T", 2 },
+				{ "Y", 2 },
+				{ "V", 2 },
+				{ "get", 1 },
+				{ "var1", 1 },
+				{ "var2", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+	};
+
+	TEST_CLASS(class_declaration)
+	{
+	public:
+		TEST_METHOD(class1)
+		{
+			file_parser parser(path_to_folder + "test39.txt");
+			std::map<std::string, int> result =
+			{
+				{ "c", 1 },
+				{ "other", 1 },
+				{ "other2", 1 },
+				{ "get", 1 },
+				{ "value", 1 },
+				{ "empty", 1 },
+				{ "add", 1 },
+				{ "type", 1 },
+				{ "v", 1 },
 			};
 			Assert::IsTrue(parser.get_user_defined_words() == result);
 		}

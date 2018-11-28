@@ -1,0 +1,12 @@
+class c : other, other2
+{
+public:
+	void get() const;
+
+protected:
+	int value;
+
+private:
+	bool empty() const;
+	void add(type v);
+}

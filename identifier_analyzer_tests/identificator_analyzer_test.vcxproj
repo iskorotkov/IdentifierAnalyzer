@@ -154,7 +154,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="examples\test19.txt" />
-    <ClCompile Include="user_defined_identifiers_tests.cpp" />
+    <ClCompile Include="file_parser_tests.cpp" />
+    <Text Include="examples\test39.txt" />
+    <Text Include="examples\test38.txt" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="examples\test1.txt" />
@@ -180,6 +182,13 @@
     <Text Include="examples\test29.txt" />
     <Text Include="examples\test3.txt" />
     <Text Include="examples\test30.txt" />
+    <Text Include="examples\test31.txt" />
+    <Text Include="examples\test32.txt" />
+    <Text Include="examples\test33.txt" />
+    <Text Include="examples\test34.txt" />
+    <Text Include="examples\test35.txt" />
+    <Text Include="examples\test36.txt" />
+    <Text Include="examples\test37.txt" />
     <Text Include="examples\test4.txt" />
     <Text Include="examples\test5.txt" />
     <Text Include="examples\test6.txt" />

@@ -1,0 +1,6 @@
+template<typename T, Y, V>
+class c : other<V>
+{
+	T var1;
+	Y get();
+}

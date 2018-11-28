@@ -1,0 +1,1 @@
+auto a = make_shared<map<string,int>>();
