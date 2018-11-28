@@ -18,121 +18,121 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="examples\test1.txt">
+    <Text Include="examples\assignment.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test2.txt">
+    <Text Include="examples\assignment_with_initializer_list.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test3.txt">
+    <Text Include="examples\multiple_variable_initialization.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test4.txt">
+    <Text Include="examples\function_call.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test5.txt">
+    <Text Include="examples\string_initialization.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test6.txt">
+    <Text Include="examples\single_line_comment.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test7.txt">
+    <Text Include="examples\multiline_comment.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test8.txt">
+    <Text Include="examples\multiline_comment2.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test9.txt">
+    <Text Include="examples\tabs.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test10.txt">
+    <Text Include="examples\empty_main_function.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test11.txt">
+    <Text Include="examples\main_function_with_return.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test12.txt">
+    <Text Include="examples\main_function_with_variable_return.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test13.txt">
+    <Text Include="examples\function_with_arguments.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test14.txt">
+    <Text Include="examples\function1.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test15.txt">
+    <Text Include="examples\system_include_directives.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test16.txt">
+    <Text Include="examples\user_include_directives.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test17.txt">
+    <Text Include="examples\define_directives.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test18.txt">
+    <Text Include="examples\for_loop.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test19.txt">
+    <Text Include="examples\for_loop2.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test20.txt">
+    <Text Include="examples\for_each_loop.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test21.txt">
+    <Text Include="examples\for_each_loop2.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test22.txt">
+    <Text Include="examples\while_loop.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test23.txt">
+    <Text Include="examples\while_loop2.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test24.txt">
+    <Text Include="examples\if_block.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test25.txt">
+    <Text Include="examples\if_block2.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test26.txt">
+    <Text Include="examples\if_block_complex.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test27.txt">
+    <Text Include="examples\if_block_nested.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test28.txt">
+    <Text Include="examples\if_else_block.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test29.txt">
+    <Text Include="examples\if_else_block2.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test30.txt">
+    <Text Include="examples\two_ternary_operators.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test31.txt">
+    <Text Include="examples\two_ternary_operators2.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test32.txt">
+    <Text Include="examples\math_expression.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test33.txt">
+    <Text Include="examples\nested_function_calls.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test34.txt">
+    <Text Include="examples\template_type_instantiation.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test35.txt">
+    <Text Include="examples\template_function_instantiation.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test36.txt">
+    <Text Include="examples\template_object_creation.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test37.txt">
+    <Text Include="examples\template_type_declaration.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test39.txt">
+    <Text Include="examples\template_function_declaration.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
-    <Text Include="examples\test38.txt">
+    <Text Include="examples\class1.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
   </ItemGroup>
