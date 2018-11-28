@@ -13,45 +13,66 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\parsers">
+      <UniqueIdentifier>{cc10e0f1-3f96-4a4c-b2f3-a1c0fdca2b8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\io">
+      <UniqueIdentifier>{f777eda5-1aa6-4e66-a367-78b597fca942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\filters">
+      <UniqueIdentifier>{5d4471ac-7747-4dd1-8963-79d0287e2559}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\data">
+      <UniqueIdentifier>{728916e5-061c-4c8b-8754-8463836c0381}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\io">
+      <UniqueIdentifier>{87799bda-676f-44f3-9d34-e9e1c4b086e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\parsers">
+      <UniqueIdentifier>{69e49673-e1eb-4ebf-afbc-e6c5bdb2b3ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\filters">
+      <UniqueIdentifier>{d6288895-3d67-4f9a-96d8-11d4c111faac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="reserved_words_dictionary.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="file_parser.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="word_filter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="parse_result_writer.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\parsers</Filter>
     </ClCompile>
     <ClCompile Include="word_parser.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="parse_result_writer.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="reserved_words_dictionary.cpp">
+      <Filter>Source Files\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="word_filter.cpp">
+      <Filter>Source Files\filters</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="reserved_words_dictionary.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="parse_result.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="file_parser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="word_filter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="parse_result_writer.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\parsers</Filter>
     </ClInclude>
     <ClInclude Include="word_parser.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="parse_result.h">
+      <Filter>Header Files\data</Filter>
+    </ClInclude>
+    <ClInclude Include="parse_result_writer.h">
+      <Filter>Header Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="reserved_words_dictionary.h">
+      <Filter>Header Files\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="word_filter.h">
+      <Filter>Header Files\filters</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
