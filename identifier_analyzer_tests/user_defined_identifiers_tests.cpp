@@ -284,4 +284,135 @@ namespace user_defined_identifiers {
 			Assert::IsTrue(parser.get_user_defined_words() == result);
 		}
 	};
+
+	TEST_CLASS(conditionals)
+	{
+	public:
+		TEST_METHOD(if_block)
+		{
+			file_parser parser(path_to_folder + "test23.txt");
+			std::map<std::string, int> result =
+			{
+				{ "t", 1 },
+				{ "a", 1 },
+				{ "b", 1 },
+				{ "func", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(if_block2)
+		{
+			file_parser parser(path_to_folder + "test26.txt");
+			std::map<std::string, int> result =
+			{
+				{ "t", 1 },
+				{ "a", 1 },
+				{ "b", 1 },
+				{ "func", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(if_block_complex)
+		{
+			file_parser parser(path_to_folder + "test24.txt");
+			std::map<std::string, int> result =
+			{
+				{ "t", 1 },
+				{ "a", 2 },
+				{ "b", 2 },
+				{ "c", 1 },
+				{ "d", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(if_block_nested)
+		{
+			file_parser parser(path_to_folder + "test25.txt");
+			std::map<std::string, int> result =
+			{
+				{ "a", 2 },
+				{ "b", 2 },
+				{ "c", 2 },
+				{ "d", 2 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(if_else_block)
+		{
+			file_parser parser(path_to_folder + "test27.txt");
+			std::map<std::string, int> result =
+			{
+				{ "a", 2 },
+				{ "b", 2 },
+				{ "c", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(if_else_block2)
+		{
+			file_parser parser(path_to_folder + "test28.txt");
+			std::map<std::string, int> result =
+			{
+				{ "a", 2 },
+				{ "b", 2 },
+				{ "c", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+	};
+
+	TEST_CLASS(ternary_operator)
+	{
+	public:
+		TEST_METHOD(two_ternary_operators)
+		{
+			file_parser parser(path_to_folder + "test29.txt");
+			std::map<std::string, int> result =
+			{
+				{ "a", 1 },
+				{ "b", 1 },
+				{ "c", 1 },
+				{ "d", 1 },
+				{ "e", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(two_ternary_operators2)
+		{
+			file_parser parser(path_to_folder + "test30.txt");
+			std::map<std::string, int> result =
+			{
+				{ "a", 1 },
+				{ "b", 1 },
+				{ "c", 1 },
+				{ "d", 1 },
+				{ "e", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+	};
+
+	TEST_CLASS(programs)
+	{
+	public:
+		TEST_METHOD(two_ternary_operators)
+		{
+			file_parser parser(path_to_folder + "test29.txt");
+			std::map<std::string, int> result =
+			{
+				{ "a", 1 },
+				{ "b", 1 },
+				{ "c", 1 },
+				{ "d", 1 },
+				{ "e", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+	};
 }

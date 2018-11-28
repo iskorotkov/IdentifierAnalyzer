@@ -89,5 +89,29 @@
     <Text Include="examples\test22.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
+    <Text Include="examples\test23.txt">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\test24.txt">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\test25.txt">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\test26.txt">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\test27.txt">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\test28.txt">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\test29.txt">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
+    <Text Include="examples\test30.txt">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
   </ItemGroup>
 </Project>

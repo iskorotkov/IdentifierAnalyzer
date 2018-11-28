@@ -171,7 +171,15 @@
     <Text Include="examples\test20.txt" />
     <Text Include="examples\test21.txt" />
     <Text Include="examples\test22.txt" />
+    <Text Include="examples\test23.txt" />
+    <Text Include="examples\test24.txt" />
+    <Text Include="examples\test25.txt" />
+    <Text Include="examples\test26.txt" />
+    <Text Include="examples\test27.txt" />
+    <Text Include="examples\test28.txt" />
+    <Text Include="examples\test29.txt" />
     <Text Include="examples\test3.txt" />
+    <Text Include="examples\test30.txt" />
     <Text Include="examples\test4.txt" />
     <Text Include="examples\test5.txt" />
     <Text Include="examples\test6.txt" />

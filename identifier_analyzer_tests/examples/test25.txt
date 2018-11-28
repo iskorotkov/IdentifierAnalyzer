@@ -1,0 +1,4 @@
+if (a && b)
+{
+	if (c || d) { int a = b, c = d; }
+}
