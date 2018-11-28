@@ -26,7 +26,11 @@ void file_parser::add_words(const std::map<std::string, int>& words)
 void file_parser::parse_file(const std::string& file_name)
 {
 	std::ifstream stream(file_name);
-
+	if (stream.fail())
+	{
+		// TODO: create class for exception
+		throw std::exception("There is no such file");
+	}
 	std::string buffer;
 	while (getline(stream, buffer))
 	{
