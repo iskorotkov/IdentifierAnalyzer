@@ -78,7 +78,7 @@ void file_parser::remove_singleline_comments(std::string& line)
 	{
 		if (*it == '/' && it[1] == '/')
 		{
-			line.erase(it, end);
+			line.erase(it, end + 1);
 			return;
 		}
 	}
@@ -86,50 +86,57 @@ void file_parser::remove_singleline_comments(std::string& line)
 
 void file_parser::remove_multiline_comment(std::string& line)
 {
-	auto commenting_start = line.begin();
-	for (auto begin = line.begin(), end = line.end(); begin < end; ++begin)
+	auto commenting_start = 0;
+	for (size_t i = 0; i < line.size() - 1; ++i)
 	{
-		if (*begin == '"')
+		if (line[i] == '"')
 		{
-			begin = find_string_literal_end(begin, end);
+			i = find_string_literal_end(line, i);
 		}
-		else if (begin < end - 1)
-		{
-			/*
-			TODO:
-			Optimize performance
 
-			1. Look for '/', only then for '*'
-			*/
-			if (*begin == '/' && begin[1] == '*' && !is_commented_out)
-			{
-				commenting_start = begin;
-				is_commented_out = true;
-			}
-			else if (*begin == '*' && begin[1] == '/' && is_commented_out)
-			{
-				erase_content(commenting_start, begin + 2);
-				is_commented_out = false;
-			}
+		/*
+		TODO:
+		Optimize performance
+
+		1. Look for '/', only then for '*'
+		*/
+		if (line[i] == '/' && line[i + 1] == '*' && !is_commented_out)
+		{
+			commenting_start = i;
+			is_commented_out = true;
 		}
+		else if (line[i] == '*' && line[i + 1] == '/' && is_commented_out)
+		{
+			line.erase(commenting_start, i - commenting_start + 1);
+			is_commented_out = false;
+		}
+	}
+	if (is_commented_out)
+	{
+		line.erase(commenting_start);
 	}
 }
 
-void file_parser::erase_content(std::string::iterator begin, std::string::iterator end) const
-{
-	while (begin < end)
-	{
-		*begin = ' ';
-		++begin;
-	}
-}
-
-std::string::iterator file_parser::find_string_literal_end(std::string::iterator begin, std::string::iterator end) const
+std::string::const_iterator file_parser::find_string_literal_end(std::string::const_iterator begin, std::string::const_iterator end) const
 {
 	++begin;
 	while (begin < end)
 	{
 		if (*begin == '"')
+		{
+			return begin;
+		}
+		++begin;
+	}
+	throw std::exception("There is no matching \" on the current line");
+}
+
+size_t file_parser::find_string_literal_end(const std::string& line, size_t begin) const
+{
+	++begin;
+	while (begin < line.size())
+	{
+		if (line[begin] == '"')
 		{
 			return begin;
 		}

@@ -30,5 +30,6 @@ private:
 	void remove_multiline_comment(std::string& line);
 	void erase_content(std::string::iterator begin, std::string::iterator end) const;
 
-	std::string::iterator find_string_literal_end(std::string::iterator begin, std::string::iterator end) const;
+	std::string::const_iterator find_string_literal_end(std::string::const_iterator begin, std::string::const_iterator end) const;
+	size_t find_string_literal_end(const std::string& line, size_t begin) const;
 };
