@@ -33,24 +33,15 @@ bool word_filter::is_valid_character(char c) const
 	return is_letter(c) || is_digit(c) || is_underscore(c);
 }
 
-bool word_filter::is_separator(char c) const
+bool word_filter::is_valid_length(std::string word) const
 {
-	return c == ';'
-		|| c == ','
-		|| c == ':'
-		|| is_brace(c)
-		|| is_operation_sign(c);
+	int size = word.size();
+	return size > 0 && size <= 256;
 }
 
 bool word_filter::is_quotation(char c) const
 {
 	return c == '\'' || c == '\"';
-}
-
-bool word_filter::is_valid_length(std::string word) const
-{
-	int size = word.size();
-	return size > 0 && size <= 256;
 }
 
 bool word_filter::is_brace(char c) const

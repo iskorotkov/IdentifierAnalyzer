@@ -7,10 +7,10 @@
 class file_parser
 {
 public:
-	file_parser(std::string file_name);
+	file_parser(const std::string& filename);
 
-	auto get_reserved_words() const { return reserved_words.get_used_identifiers(); }
-	auto get_user_defined_words() const { return user_defined_words.get_used_identifiers(); }
+	auto get_reserved_words() const { return reserved_words.get_identifiers(); }
+	auto get_user_defined_words() const { return user_defined_words.get_identifiers(); }
 
 private:
 	parse_result reserved_words;
@@ -20,12 +20,12 @@ private:
 	bool is_commented_out = false;
 
 	void add_words(const std::map<std::string, int>& words);
-	void add_reserved_word(std::string word, int amount) { reserved_words.add_used_identifier(word, amount); }
-	void add_user_defined_word(std::string word, int amount) { user_defined_words.add_used_identifier(word, amount); }
+	void add_reserved_word(const std::string& word, int amount) { reserved_words.add_identifier(word, amount); }
+	void add_user_defined_word(const std::string& word, int amount) { user_defined_words.add_identifier(word, amount); }
 
 	void parse_file(const std::string& file_name);
 	void parse_line(std::string& line);
-	void parse_preprocessor_directive(std::string line);
+	void parse_preprocessor_directive(const std::string& line);
 	void remove_singleline_comments(std::string& line);
 	void remove_multiline_comment(std::string& line);
 

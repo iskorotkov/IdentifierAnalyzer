@@ -3,9 +3,9 @@
 #include <sstream>
 #include <string>
 
-file_parser::file_parser(std::string file_name)
+file_parser::file_parser(const std::string& filename)
 {
-	parse_file(file_name);
+	parse_file(filename);
 }
 
 void file_parser::add_words(const std::map<std::string, int>& words)
@@ -60,7 +60,7 @@ void file_parser::parse_line(std::string& line)
 	}
 }
 
-void file_parser::parse_preprocessor_directive(std::string line)
+void file_parser::parse_preprocessor_directive(const std::string& line)
 {
 	std::istringstream stream(line);
 	std::string buffer;
@@ -97,13 +97,6 @@ void file_parser::remove_multiline_comment(std::string& line)
 		{
 			i = find_string_literal_end(line, i);
 		}
-
-		/*
-		TODO:
-		Optimize performance
-
-		1. Look for '/', only then for '*'
-		*/
 		if (line[i] == '/' && line[i + 1] == '*' && !is_commented_out)
 		{
 			commenting_start = i;

@@ -8,7 +8,6 @@ public:
 	bool is_valid_first_character(const std::string& word) const;
 	bool is_valid_first_character(char c) const;
 	bool is_valid_character(char c) const;
-	bool is_separator(char c) const;
 	bool is_quotation(char c) const;
 
 private:
