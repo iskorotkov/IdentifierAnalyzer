@@ -42,6 +42,11 @@ bool word_filter::is_separator(char c) const
 		|| is_operation_sign(c);
 }
 
+bool word_filter::is_quotation(char c) const
+{
+	return c == '\'' || c == '\"';
+}
+
 bool word_filter::is_valid_length(std::string word) const
 {
 	int size = word.size();
