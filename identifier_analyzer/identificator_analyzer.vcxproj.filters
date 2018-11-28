@@ -74,6 +74,9 @@
     <ClInclude Include="word_filter.h">
       <Filter>Header Files\filters</Filter>
     </ClInclude>
+    <ClInclude Include="io_exception.h">
+      <Filter>Header Files\io</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
