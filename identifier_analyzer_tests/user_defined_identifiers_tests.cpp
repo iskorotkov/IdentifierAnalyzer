@@ -173,4 +173,115 @@ namespace user_defined_identifiers {
 			Assert::IsTrue(parser.get_user_defined_words() == result);
 		}
 	};
+
+	TEST_CLASS(macros_usage)
+	{
+	public:
+		TEST_METHOD(system_include_directives)
+		{
+			file_parser parser(path_to_folder + "test14.txt");
+			std::map<std::string, int> result =
+			{
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(user_include_directives)
+		{
+			file_parser parser(path_to_folder + "test15.txt");
+			std::map<std::string, int> result =
+			{
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(define_directives)
+		{
+			file_parser parser(path_to_folder + "test16.txt");
+			std::map<std::string, int> result =
+			{
+				{ "a", 1 },
+				{ "p", 1 },
+				{ "value", 2 },
+				{ "pi", 2 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+	};
+
+	TEST_CLASS(loops)
+	{
+	public:
+		TEST_METHOD(for_loop)
+		{
+			file_parser parser(path_to_folder + "test17.txt");
+			std::map<std::string, int> result =
+			{
+				{ "i", 3 },
+				{ "a", 1 },
+				{ "b", 1 },
+				{ "size", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(for_loop2)
+		{
+			file_parser parser(path_to_folder + "test20.txt");
+			std::map<std::string, int> result =
+			{
+				{ "i", 3 },
+				{ "a", 1 },
+				{ "b", 1 },
+				{ "size", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(for_each_loop)
+		{
+			file_parser parser(path_to_folder + "test18.txt");
+			std::map<std::string, int> result =
+			{
+				{ "c", 1 },
+				{ "line", 1 },
+				{ "do_something", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(for_each_loop2)
+		{
+			file_parser parser(path_to_folder + "test21.txt");
+			std::map<std::string, int> result =
+			{
+				{ "c", 1 },
+				{ "line", 1 },
+				{ "do_something", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(while_loop)
+		{
+			file_parser parser(path_to_folder + "test19.txt");
+			std::map<std::string, int> result =
+			{
+				{ "start", 2 },
+				{ "end", 2 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(while_loop2)
+		{
+			file_parser parser(path_to_folder + "test22.txt");
+			std::map<std::string, int> result =
+			{
+				{ "start", 2 },
+				{ "end", 2 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+	};
 }

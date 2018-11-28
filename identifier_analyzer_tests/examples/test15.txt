@@ -1,0 +1,3 @@
+#include "file.h"
+#include "folder/file.h"
+#include "other_file.cpp"

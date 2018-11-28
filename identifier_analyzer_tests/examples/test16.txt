@@ -1,0 +1,5 @@
+#define value 100
+#define pi 3.14
+
+const int a = value;
+float p = pi;
