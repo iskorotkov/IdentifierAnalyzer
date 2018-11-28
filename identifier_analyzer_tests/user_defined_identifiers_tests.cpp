@@ -109,5 +109,68 @@ namespace user_defined_identifiers {
 			};
 			Assert::IsTrue(parser.get_user_defined_words() == result);
 		}
+
+		TEST_METHOD(tabs)
+		{
+			file_parser parser(path_to_folder + "test11.txt");
+			std::map<std::string, int> result =
+			{
+				{ "a", 1 },
+				{ "b", 1 },
+				{ "c", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+	};
+
+	TEST_CLASS(function_declaration)
+	{
+	public:
+		TEST_METHOD(empty_main_function)
+		{
+			file_parser parser(path_to_folder + "test9.txt");
+			std::map<std::string, int> result =
+			{
+				{ "main", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(main_function_with_return)
+		{
+			file_parser parser(path_to_folder + "test10.txt");
+			std::map<std::string, int> result =
+			{
+				{ "main", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(main_function_with_variable_return)
+		{
+			file_parser parser(path_to_folder + "test12.txt");
+			std::map<std::string, int> result =
+			{
+				{ "main", 1 },
+				{ "a", 2 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
+
+		TEST_METHOD(function_with_arguments)
+		{
+			file_parser parser(path_to_folder + "test13.txt");
+			std::map<std::string, int> result =
+			{
+				{ "func", 1 },
+				{ "a", 1 },
+				{ "b", 1 },
+				{ "c", 1 },
+				{ "stream", 1 },
+				{ "string", 1 },
+				{ "iostream", 1 },
+			};
+			Assert::IsTrue(parser.get_user_defined_words() == result);
+		}
 	};
 }

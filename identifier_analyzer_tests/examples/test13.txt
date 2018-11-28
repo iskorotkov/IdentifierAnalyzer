@@ -1,0 +1,1 @@
+int func(int a, string b, iostream& stream, char* c);
