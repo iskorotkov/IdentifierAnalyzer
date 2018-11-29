@@ -1,1 +1,3 @@
-string a = "abc "+c;
+int a; /*
+comment
+*/

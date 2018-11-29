@@ -46,8 +46,9 @@ void file_parser::parse_line(std::string& line)
 		return;
 	}
 
-	analyze_if_preprocessor_directive(line);
 	analyze_if_comment(line);
+	analyze_if_string_literal(line);
+	analyze_if_preprocessor_directive(line);
 	std::istringstream stream(line);
 	std::string buffer;
 	while (stream >> buffer)
@@ -83,13 +84,8 @@ void file_parser::analyze_if_comment(std::string& line)
 		return;
 	}
 	auto commenting_start = 0;
-	for (size_t i = 0; i < line.size() - 1; ++i)
+	for (size_t i = 0; i < line.length() - 1; ++i)
 	{
-		if (line[i] == '"')
-		{
-			i = find_string_literal_end(line, i);
-		}
-
 		if (line[i] == '/' && line[i + 1] == '/')
 		{
 			line.erase(i);
@@ -112,26 +108,28 @@ void file_parser::analyze_if_comment(std::string& line)
 	}
 }
 
-std::string::const_iterator file_parser::find_string_literal_end(std::string::const_iterator begin, std::string::const_iterator end) const
+void file_parser::analyze_if_string_literal(std::string& line)
 {
-	++begin;
-	while (begin < end)
+	if (line.empty())
 	{
-		if (*begin == '"')
-		{
-			return begin;
-		}
-		++begin;
+		return;
 	}
-	throw invalid_syntax_exception("There is no matching \" on the current line");
+	for (size_t i = 0; i < line.length() - 1; ++i)
+	{
+		if (line[i] == '"')
+		{
+			auto end = find_string_literal_end(line, i + 1);
+			line.erase(i, end - i + 1);
+			--i;
+		}
+	}
 }
 
 size_t file_parser::find_string_literal_end(const std::string& line, size_t begin) const
 {
-	++begin;
 	while (begin < line.size())
 	{
-		if (line[begin] == '"')
+		if (filter.is_quotation(line[begin]))
 		{
 			return begin;
 		}

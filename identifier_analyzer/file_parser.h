@@ -3,6 +3,7 @@
 #include "parse_result.h"
 #include "reserved_words_dictionary.h"
 #include "word_parser.h"
+#include "word_filter.h"
 
 /** Класс для открытия и обработки содержимого файла */
 class file_parser
@@ -25,6 +26,7 @@ private:
 	parse_result user_defined_words;
 	reserved_words_dictionary dictionary;
 	word_parser parser;
+	word_filter filter;
 	bool is_commented_out = false;
 
 	/** Разделяет слова на ключевые и не ключевые и добавляет их в соответствубщие списки */
@@ -45,7 +47,8 @@ private:
 	/** Удаляет комментарии (однострочные и многострочные), если они есть */
 	void analyze_if_comment(std::string& line);
 
+	void analyze_if_string_literal(std::string& line);
+
 	/** Находит конец строкового литерала (string literal) */
-	std::string::const_iterator find_string_literal_end(std::string::const_iterator begin, std::string::const_iterator end) const;
 	size_t find_string_literal_end(const std::string& line, size_t begin) const;
 };

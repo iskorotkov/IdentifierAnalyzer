@@ -1,5 +1,1 @@
 a                1
-b                1
-get              1
-ptr              1
-string           1

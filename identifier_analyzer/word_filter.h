@@ -13,7 +13,6 @@ public:
 	bool is_valid_word(const std::string& word) const;
 
 	/** Проверяет, является ли символ корректным первым символом идентификатора C++ */
-	bool is_valid_first_character(const std::string& word) const;
 	bool is_valid_first_character(char c) const;
 
 	/** Проверяет, является ли символ корректным НЕпервым символом идентификатора C++ */
