@@ -2,8 +2,8 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include "char_utility.h"
 #include "io_exception.h"
-#include "invalid_syntax_exception.h"
 
 file_parser::file_parser(const std::string& filename)
 {
@@ -118,22 +118,9 @@ void file_parser::analyze_if_string_literal(std::string& line)
 	{
 		if (line[i] == '"')
 		{
-			auto end = find_string_literal_end(line, i + 1);
+			auto end = char_utility::find_string_literal_end(line, i + 1);
 			line.erase(i, end - i + 1);
 			--i;
 		}
 	}
-}
-
-size_t file_parser::find_string_literal_end(const std::string& line, size_t begin) const
-{
-	while (begin < line.size())
-	{
-		if (filter.is_quotation(line[begin]))
-		{
-			return begin;
-		}
-		++begin;
-	}
-	throw invalid_syntax_exception("There is no matching \" on the current line");
 }

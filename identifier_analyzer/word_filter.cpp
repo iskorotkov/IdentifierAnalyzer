@@ -1,4 +1,5 @@
 #include "word_filter.h"
+#include "char_utility.h"
 
 bool word_filter::is_valid_word(const std::string& word) const
 {
@@ -20,43 +21,18 @@ bool word_filter::is_valid_word(const std::string& word) const
 
 bool word_filter::is_valid_first_character(char c) const
 {
-	return is_letter(c) || is_underscore(c);
+	return char_utility::is_letter(c) || char_utility::is_underscore(c);
 }
 
 bool word_filter::is_valid_character(char c) const
 {
-	return is_letter(c) || is_digit(c) || is_underscore(c);
+	return char_utility::is_letter(c)
+		|| char_utility::is_digit(c)
+		|| char_utility::is_underscore(c);
 }
 
 bool word_filter::is_valid_length(std::string word) const
 {
 	int size = word.size();
 	return size > 0 && size <= 256;
-}
-
-bool word_filter::is_quotation(char c) const
-{
-	return c == '\'' || c == '\"';
-}
-
-bool word_filter::is_brace(char c) const
-{
-	return c == '('
-		|| c == ')'
-		|| c == '<'
-		|| c == '>'
-		|| c == '['
-		|| c == ']';
-}
-
-bool word_filter::is_operation_sign(char c) const
-{
-	return c == '+'
-		|| c == '-'
-		|| c == '*'
-		|| c == '/'
-		|| c == '='
-		|| c == '^'
-		|| c == '~'
-		|| c == '!';
 }

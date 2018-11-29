@@ -34,6 +34,12 @@
     <Filter Include="Source Files\filters">
       <UniqueIdentifier>{d6288895-3d67-4f9a-96d8-11d4c111faac}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\utility">
+      <UniqueIdentifier>{ebc63daf-6639-412b-af50-54c1f9eeefb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utility">
+      <UniqueIdentifier>{33bf6ae5-1843-4b7a-b0d3-9921eb79b8e0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -53,6 +59,9 @@
     </ClCompile>
     <ClCompile Include="word_filter.cpp">
       <Filter>Source Files\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="char_utility.cpp">
+      <Filter>Source Files\utility</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +88,9 @@
     </ClInclude>
     <ClInclude Include="invalid_syntax_exception.h">
       <Filter>Header Files\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="char_utility.h">
+      <Filter>Header Files\utility</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

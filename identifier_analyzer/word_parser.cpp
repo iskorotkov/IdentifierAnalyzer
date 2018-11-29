@@ -1,4 +1,5 @@
 #include "word_parser.h"
+#include "char_utility.h"
 
 std::map<std::string, int> word_parser::parse_word(const std::string& word) const
 {
@@ -13,7 +14,7 @@ std::map<std::string, int> word_parser::parse_word(const std::string& word) cons
 		{
 			buffer.push_back(c);
 		}
-		else if (filter.is_quotation(c))
+		else if (char_utility::is_quotation(c))
 		{
 			i = word.find(c, i + 1);
 		}

@@ -5,6 +5,7 @@
 #include "../identifier_analyzer/word_parser.cpp"
 #include "../identifier_analyzer/file_parser.cpp"
 #include "../identifier_analyzer/word_filter.cpp"
+#include "../identifier_analyzer/char_utility.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
