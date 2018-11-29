@@ -31,5 +31,6 @@ std::map<std::string, int>::const_iterator parse_result_writer::get_most_frequen
 
 void parse_result_writer::write_pair(const std::pair<const std::string, int>& p, std::ofstream& stream) const
 {
-	stream << std::setw(word_column_size) << std::left << p.first.c_str() << std::setw(count_column_size) << std::right << p.second;
+	stream << std::setw(word_column_size) << std::left << p.first.c_str()
+		<< std::setw(count_column_size) << std::right << p.second;
 }

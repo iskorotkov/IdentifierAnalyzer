@@ -3,6 +3,7 @@
 #include <sstream>
 #include <string>
 #include "io_exception.h"
+#include "invalid_syntax_exception.h"
 
 file_parser::file_parser(const std::string& filename)
 {
@@ -44,12 +45,9 @@ void file_parser::parse_line(std::string& line)
 	{
 		return;
 	}
-	if (line[0] == '#')
-	{
-		parse_preprocessor_directive(line);
-		return;
-	}
-	remove_comments(line);
+
+	analyze_if_preprocessor_directive(line);
+	analyze_if_comment(line);
 	std::istringstream stream(line);
 	std::string buffer;
 	while (stream >> buffer)
@@ -59,24 +57,31 @@ void file_parser::parse_line(std::string& line)
 	}
 }
 
-void file_parser::parse_preprocessor_directive(const std::string& line)
+void file_parser::analyze_if_preprocessor_directive(std::string& line)
 {
+	if (line.empty())
+	{
+		return;
+	}
 	std::istringstream stream(line);
 	std::string buffer;
 	stream >> buffer;
-	if (buffer != "#define")
+	if (buffer == "#define")
 	{
-		return;
+		line.erase(buffer.find('#'), 7);
 	}
-	while (stream >> buffer)
+	else if (buffer[0] == '#')
 	{
-		auto result = parser.parse_word(buffer);
-		add_words(result);
+		line.clear();
 	}
 }
 
-void file_parser::remove_comments(std::string& line)
+void file_parser::analyze_if_comment(std::string& line)
 {
+	if (line.empty())
+	{
+		return;
+	}
 	auto commenting_start = 0;
 	for (size_t i = 0; i < line.size() - 1; ++i)
 	{
@@ -118,7 +123,7 @@ std::string::const_iterator file_parser::find_string_literal_end(std::string::co
 		}
 		++begin;
 	}
-	throw std::exception("There is no matching \" on the current line");
+	throw invalid_syntax_exception("There is no matching \" on the current line");
 }
 
 size_t file_parser::find_string_literal_end(const std::string& line, size_t begin) const
@@ -132,5 +137,5 @@ size_t file_parser::find_string_literal_end(const std::string& line, size_t begi
 		}
 		++begin;
 	}
-	throw std::exception("There is no matching \" on the current line");
+	throw invalid_syntax_exception("There is no matching \" on the current line");
 }

@@ -26,8 +26,8 @@ private:
 	void add_user_defined_word(const std::string& word, int amount) { user_defined_words.add_identifier(word, amount); }
 
 	void parse_line(std::string& line);
-	void parse_preprocessor_directive(const std::string& line);
-	void remove_comments(std::string& line);
+	void analyze_if_preprocessor_directive(std::string& line);
+	void analyze_if_comment(std::string& line);
 
 	std::string::const_iterator find_string_literal_end(std::string::const_iterator begin, std::string::const_iterator end) const;
 	size_t find_string_literal_end(const std::string& line, size_t begin) const;
