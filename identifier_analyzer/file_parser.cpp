@@ -44,13 +44,12 @@ void file_parser::parse_line(std::string& line)
 	{
 		return;
 	}
-	if (!line.empty() && line[0] == '#')
+	if (line[0] == '#')
 	{
 		parse_preprocessor_directive(line);
 		return;
 	}
-	remove_singleline_comments(line);
-	remove_multiline_comment(line);
+	remove_comments(line);
 	std::istringstream stream(line);
 	std::string buffer;
 	while (stream >> buffer)
@@ -76,19 +75,7 @@ void file_parser::parse_preprocessor_directive(const std::string& line)
 	}
 }
 
-void file_parser::remove_singleline_comments(std::string& line)
-{
-	for (auto it = line.cbegin(), end = line.cend() - 1; it < end; ++it)
-	{
-		if (*it == '/' && it[1] == '/')
-		{
-			line.erase(it, end + 1);
-			return;
-		}
-	}
-}
-
-void file_parser::remove_multiline_comment(std::string& line)
+void file_parser::remove_comments(std::string& line)
 {
 	auto commenting_start = 0;
 	for (size_t i = 0; i < line.size() - 1; ++i)
@@ -97,7 +84,13 @@ void file_parser::remove_multiline_comment(std::string& line)
 		{
 			i = find_string_literal_end(line, i);
 		}
-		if (line[i] == '/' && line[i + 1] == '*' && !is_commented_out)
+
+		if (line[i] == '/' && line[i + 1] == '/')
+		{
+			line.erase(i);
+			return;
+		}
+		else if (line[i] == '/' && line[i + 1] == '*' && !is_commented_out)
 		{
 			commenting_start = i;
 			is_commented_out = true;
