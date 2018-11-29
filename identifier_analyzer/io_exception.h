@@ -1,6 +1,7 @@
 #pragma once
 #include <exception>
 
+/** Îרטבךא נאבמעû ס פאיכאלט */
 class io_exception : std::exception
 {
 public:

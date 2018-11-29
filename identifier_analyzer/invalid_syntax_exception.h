@@ -1,6 +1,7 @@
 #pragma once
 #include <exception>
 
+/** Ошибка при анализе синаксически некорректной программы */
 class invalid_syntax_exception : std::exception
 {
 public:

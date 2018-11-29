@@ -1,1 +1,1 @@
-virtual int get(string& a,int b,void* ptr) const noexcept;
+string a = "abc "+c;

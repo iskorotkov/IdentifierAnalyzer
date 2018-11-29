@@ -3,9 +3,11 @@
 
 // Reference: https://en.cppreference.com/w/cpp/keyword
 
+/** Класс для определения, является ли слово ключевым */
 class reserved_words_dictionary
 {
 public:
+	/**	Проверяет, является ли слово ключевым (зарезервированным) */
 	bool is_reserved_word(std::string word) const;
 
 private:
