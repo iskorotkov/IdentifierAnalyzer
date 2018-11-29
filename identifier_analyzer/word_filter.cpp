@@ -8,9 +8,9 @@ bool word_filter::is_valid_word(const std::string& word) const
 	{
 		return false;
 	}
-	for (const char i : word)
+	for (size_t i = 1; i < word.size(); ++i)
 	{
-		if (!is_valid_character(i))
+		if (!is_valid_character(word[i]))
 		{
 			return false;
 		}
