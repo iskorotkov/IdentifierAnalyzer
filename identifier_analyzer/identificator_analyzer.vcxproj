@@ -128,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="file_parser.h" />
+    <ClInclude Include="invalid_syntax_exception.h" />
     <ClInclude Include="io_exception.h" />
     <ClInclude Include="parse_result.h" />
     <ClInclude Include="parse_result_writer.h" />

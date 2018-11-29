@@ -77,6 +77,9 @@
     <ClInclude Include="io_exception.h">
       <Filter>Header Files\io</Filter>
     </ClInclude>
+    <ClInclude Include="invalid_syntax_exception.h">
+      <Filter>Header Files\parsers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
