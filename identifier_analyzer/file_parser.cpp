@@ -46,8 +46,8 @@ void file_parser::parse_line(std::string& line)
 		return;
 	}
 
-	analyze_if_comment(line);
 	analyze_if_string_literal(line);
+	analyze_if_comment(line);
 	analyze_if_preprocessor_directive(line);
 	std::istringstream stream(line);
 	std::string buffer;
