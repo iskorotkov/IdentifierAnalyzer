@@ -1,4 +1,4 @@
-#include "CppUnitTest.h"
+﻿#include "CppUnitTest.h"
 #include <map>
 #include <string>
 #include "../identifier_analyzer/reserved_words_dictionary.cpp"
@@ -9,7 +9,7 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-const std::string path_to_folder = "D:/Projects/identifier_analyzer/identifier_analyzer_tests/examples/";
+const std::string path_to_folder = "C:/Projects/identifier_analyzer/identifier_analyzer_tests/examples/";
 const std::string file_extension = ".txt";
 
 auto get_parsed_result(std::string full_function_name)
@@ -529,6 +529,21 @@ namespace file_parser_tests {
 				{ "length257", 1 },
 			};
 			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
+		}
+	};
+
+	TEST_CLASS(large_file_content)
+	{
+	public:
+		TEST_METHOD(large_content1)
+		{
+			try
+			{
+			}
+			catch (std::exception e)
+			{
+				get_parsed_result(__FUNCTION__);
+			}
 		}
 	};
 }

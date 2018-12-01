@@ -23,7 +23,7 @@
     <ProjectGuid>{CE5B5090-8891-48A6-9BA8-CDE28EB838EB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>identificator_analyzer_test</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <ProjectSubType>NativeUnitTestProject</ProjectSubType>
     <ProjectName>identifier_analyzer_tests</ProjectName>
   </PropertyGroup>
@@ -153,49 +153,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="examples\long_names.txt" />
-    <Text Include="examples\while_loop.txt" />
     <ClCompile Include="file_parser_tests.cpp" />
-    <Text Include="examples\class1.txt" />
-    <Text Include="examples\function1.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="examples\assignment.txt" />
-    <Text Include="examples\main_function_with_return.txt" />
-    <Text Include="examples\tabs.txt" />
-    <Text Include="examples\main_function_with_variable_return.txt" />
-    <Text Include="examples\function_with_arguments.txt" />
-    <Text Include="examples\system_include_directives.txt" />
-    <Text Include="examples\user_include_directives.txt" />
-    <Text Include="examples\define_directives.txt" />
-    <Text Include="examples\for_loop.txt" />
-    <Text Include="examples\for_each_loop.txt" />
-    <Text Include="examples\assignment_with_initializer_list.txt" />
-    <Text Include="examples\for_loop2.txt" />
-    <Text Include="examples\for_each_loop2.txt" />
-    <Text Include="examples\while_loop2.txt" />
-    <Text Include="examples\if_block.txt" />
-    <Text Include="examples\if_block_complex.txt" />
-    <Text Include="examples\if_block_nested.txt" />
-    <Text Include="examples\if_block2.txt" />
-    <Text Include="examples\if_else_block.txt" />
-    <Text Include="examples\if_else_block2.txt" />
-    <Text Include="examples\two_ternary_operators.txt" />
-    <Text Include="examples\multiple_variable_initialization.txt" />
-    <Text Include="examples\two_ternary_operators2.txt" />
-    <Text Include="examples\math_expression.txt" />
-    <Text Include="examples\nested_function_calls.txt" />
-    <Text Include="examples\template_type_instantiation.txt" />
-    <Text Include="examples\template_function_instantiation.txt" />
-    <Text Include="examples\template_object_creation.txt" />
-    <Text Include="examples\template_type_declaration.txt" />
-    <Text Include="examples\template_function_declaration.txt" />
-    <Text Include="examples\function_call.txt" />
-    <Text Include="examples\string_initialization.txt" />
-    <Text Include="examples\single_line_comment.txt" />
-    <Text Include="examples\multiline_comment.txt" />
-    <Text Include="examples\multiline_comment2.txt" />
-    <Text Include="examples\empty_main_function.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\identifier_analyzer\identificator_analyzer.vcxproj">

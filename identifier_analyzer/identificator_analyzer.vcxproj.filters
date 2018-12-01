@@ -40,6 +40,9 @@
     <Filter Include="Source Files\utility">
       <UniqueIdentifier>{33bf6ae5-1843-4b7a-b0d3-9921eb79b8e0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\tests">
+      <UniqueIdentifier>{36e72ff8-d4ac-44df-90c8-d8f70cad4dd3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -99,6 +102,129 @@
     </Text>
     <Text Include="output.txt">
       <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="tests\assignment.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\assignment_with_initializer_list.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\class1.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\define_directives.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\empty_main_function.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\for_each_loop.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\for_each_loop2.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\for_loop.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\for_loop2.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\function_call.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\function_with_arguments.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\function1.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\if_block.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\if_block_complex.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\if_block_nested.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\if_block2.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\if_else_block.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\if_else_block2.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\large_content1.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\long_names.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\main_function_with_return.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\main_function_with_variable_return.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\math_expression.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\multiline_comment.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\multiline_comment2.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\multiple_variable_initialization.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\nested_function_calls.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\single_line_comment.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\string_initialization.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\system_include_directives.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\tabs.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\template_function_declaration.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\template_function_instantiation.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\template_object_creation.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\template_type_declaration.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\template_type_instantiation.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\two_ternary_operators.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\two_ternary_operators2.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\user_include_directives.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\while_loop.txt">
+      <Filter>Resource Files\tests</Filter>
+    </Text>
+    <Text Include="tests\while_loop2.txt">
+      <Filter>Resource Files\tests</Filter>
     </Text>
   </ItemGroup>
 </Project>
