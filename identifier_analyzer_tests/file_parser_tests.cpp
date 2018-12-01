@@ -6,6 +6,7 @@
 #include "../identifier_analyzer/file_parser.cpp"
 #include "../identifier_analyzer/word_filter.cpp"
 #include "../identifier_analyzer/char_utility.cpp"
+#include "../identifier_analyzer/io_exception.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -539,11 +540,27 @@ namespace file_parser_tests {
 		{
 			try
 			{
+				auto result = get_parsed_result(__FUNCTION__);
+				Assert::IsTrue(result.size() >= 1794);
 			}
 			catch (std::exception e)
 			{
-				get_parsed_result(__FUNCTION__);
+				Assert::Fail();
 			}
+		}
+	};
+
+	TEST_CLASS(incorrect_file_names)
+	{
+	public:
+		TEST_METHOD(invalid_name)
+		{
+			Assert::ExpectException<io_exception>([] { get_parsed_result("abc:def.ghi"); });
+		}
+
+		TEST_METHOD(missing_file)
+		{
+			Assert::ExpectException<io_exception>([] { get_parsed_result("gisgdvisgvisdgvsidgvsdigv.khvdvlshgvgh"); });
 		}
 	};
 }
