@@ -5,9 +5,10 @@
 
 size_t char_utility::find_string_literal_end(const std::string& line, size_t begin)
 {
+	auto& quotation = line[begin-1];
 	while (begin < line.size())
 	{
-		if (is_quotation(line[begin]))
+		if (is_quotation(line[begin]) && quotation == line[begin])
 		{
 			return begin;
 		}
