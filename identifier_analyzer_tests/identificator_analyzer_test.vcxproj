@@ -164,6 +164,7 @@
     <Text Include="examples\assignment.txt" />
     <Text Include="examples\assignment_with_initializer_list.txt" />
     <Text Include="examples\class1.txt" />
+    <Text Include="examples\class_methods_definition.txt" />
     <Text Include="examples\define_directives.txt" />
     <Text Include="examples\empty_main_function.txt" />
     <Text Include="examples\for_each_loop.txt" />

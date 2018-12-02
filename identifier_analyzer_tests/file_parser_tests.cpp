@@ -563,4 +563,22 @@ namespace file_parser_tests {
 			Assert::ExpectException<io_exception>([] { get_parsed_result("gisgdvisgvisdgvsidgvsdigv.khvdvlshgvgh"); });
 		}
 	};
+
+	TEST_CLASS(function_definition)
+	{
+	public:
+		TEST_METHOD(class_methods_definition)
+		{
+			std::map<std::string, int> result =
+			{
+				{ "class1", 2 },
+				{ "method1", 1 },
+				{ "method2", 1 },
+				{ "s", 1 },
+				{ "i", 1 },
+				{ "string", 1 },
+			};
+			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
+		}
+	};
 }

@@ -146,5 +146,8 @@
     <Text Include="examples\while_loop2.txt">
       <Filter>Resource Files\examples</Filter>
     </Text>
+    <Text Include="examples\class_methods_definition.txt">
+      <Filter>Resource Files\examples</Filter>
+    </Text>
   </ItemGroup>
 </Project>
