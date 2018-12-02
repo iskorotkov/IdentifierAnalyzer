@@ -47,4 +47,7 @@ private:
 
 	/** Удаляет строковые литералы (string literals), если они есть */
 	void analyze_if_string_literal(std::string& line);
+
+	/** Удаляет строковые литералы (string literals) и комментарии за один проход */
+	void remove_literals_and_comments(std::string& line);
 };

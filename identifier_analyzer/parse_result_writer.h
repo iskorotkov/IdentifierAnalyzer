@@ -12,10 +12,10 @@ public:
 
 private:
 	/** Ширина колонки для имени идентификатора */
-	const int word_column_size = 15;
+	const int word_column_size = 30;
 
 	/** Ширина колонки для количества идентификаторов в тексте */
-	const int count_column_size = 3;
+	const int count_column_size = 5;
 
 	/** Находит наиболее часто встречаемый идентификатор в словаре */
 	std::map<std::string, int>::const_iterator get_most_frequent_word(const std::map<std::string, int>& words) const;
