@@ -76,54 +76,6 @@ void file_parser::analyze_if_preprocessor_directive(std::string& line)
 	}
 }
 
-void file_parser::analyze_if_comment(std::string& line)
-{
-	if (line.empty())
-	{
-		return;
-	}
-	auto commenting_start = 0;
-	for (size_t i = 0; i < line.length() - 1; ++i)
-	{
-		if (line[i] == '/' && line[i + 1] == '/')
-		{
-			line.erase(i);
-			return;
-		}
-		else if (line[i] == '/' && line[i + 1] == '*' && !is_commented_out)
-		{
-			commenting_start = i;
-			is_commented_out = true;
-		}
-		else if (line[i] == '*' && line[i + 1] == '/' && is_commented_out)
-		{
-			line.erase(commenting_start, i - commenting_start + 1);
-			is_commented_out = false;
-		}
-	}
-	if (is_commented_out)
-	{
-		line.erase(commenting_start);
-	}
-}
-
-void file_parser::analyze_if_string_literal(std::string& line)
-{
-	if (line.empty())
-	{
-		return;
-	}
-	for (size_t i = 0; i < line.length() - 1; ++i)
-	{
-		if (line[i] == '"')
-		{
-			auto end = char_utility::find_string_literal_end(line, i + 1);
-			line.erase(i, end - i + 1);
-			--i;
-		}
-	}
-}
-
 void file_parser::remove_literals_and_comments(std::string& line)
 {
 	if (line.empty())
@@ -148,12 +100,13 @@ void file_parser::remove_literals_and_comments(std::string& line)
 		{
 			commenting_start = i;
 			is_commented_out = true;
+			++i;
 		}
 		else if (line[i] == '*' && line[i + 1] == '/' && is_commented_out)
 		{
 			line.erase(commenting_start, i - commenting_start + 1);
-			--i;
 			is_commented_out = false;
+			--i;
 		}
 	}
 	if (is_commented_out)
