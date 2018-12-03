@@ -14,14 +14,6 @@ std::map<std::string, int> word_parser::parse_word(const std::string& word) cons
 		{
 			buffer.push_back(c);
 		}
-		else if (char_utility::is_quotation(c))
-		{
-			i = word.find(c, i + 1);
-			if (i == std::string::npos)
-			{
-				break;
-			}
-		}
 		else if (!filter.is_valid_character(c))
 		{
 			if (filter.is_valid_word(buffer))
