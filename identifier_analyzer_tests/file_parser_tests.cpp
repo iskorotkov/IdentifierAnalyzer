@@ -21,7 +21,7 @@ auto get_parsed_result(std::string full_function_name)
 }
 
 namespace file_parser_tests {
-	TEST_CLASS(single_expression)
+	TEST_CLASS(expressions)
 	{
 	public:
 
@@ -72,59 +72,39 @@ namespace file_parser_tests {
 			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
 		}
 
-		TEST_METHOD(string_initialization)
+		TEST_METHOD(math_expression)
 		{
 			std::map<std::string, int> result =
 			{
 				{ "std", 1 },
 				{ "string", 1 },
+				{ "a", 2 },
+				{ "b", 1 },
+				{ "c", 1 },
+				{ "d", 3 },
+				{ "f", 4 },
 				{ "s", 1 },
 			};
 			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
 		}
 
-		TEST_METHOD(single_line_comment)
+		TEST_METHOD(nested_function_calls)
 		{
 			std::map<std::string, int> result =
 			{
 				{ "a", 1 },
-				{ "b", 1 },
+				{ "b", 2 },
 				{ "c", 1 },
-			};
-			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
-		}
-
-		TEST_METHOD(multiline_comment)
-		{
-			std::map<std::string, int> result =
-			{
-				{ "a", 1 },
-			};
-			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
-		}
-
-		TEST_METHOD(multiline_comment2)
-		{
-			std::map<std::string, int> result =
-			{
-				{ "a", 1 },
-			};
-			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
-		}
-
-		TEST_METHOD(tabs)
-		{
-			std::map<std::string, int> result =
-			{
-				{ "a", 1 },
-				{ "b", 1 },
-				{ "c", 1 },
+				{ "d", 1 },
+				{ "e", 1 },
+				{ "f", 1 },
+				{ "g", 1 },
 			};
 			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
 		}
 	};
 
-	TEST_CLASS(function_declaration)
+	TEST_CLASS(declarations)
 	{
 	public:
 		TEST_METHOD(empty_main_function)
@@ -179,6 +159,23 @@ namespace file_parser_tests {
 				{ "string", 1 },
 				{ "ptr", 1 },
 				{ "get", 1 },
+			};
+			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
+		}
+
+		TEST_METHOD(class1)
+		{
+			std::map<std::string, int> result =
+			{
+				{ "c", 1 },
+				{ "other", 1 },
+				{ "other2", 1 },
+				{ "get", 1 },
+				{ "value", 1 },
+				{ "empty", 1 },
+				{ "add", 1 },
+				{ "type", 1 },
+				{ "v", 1 },
 			};
 			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
 		}
@@ -359,11 +356,7 @@ namespace file_parser_tests {
 			};
 			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
 		}
-	};
 
-	TEST_CLASS(ternary_operator)
-	{
-	public:
 		TEST_METHOD(two_ternary_operators)
 		{
 			std::map<std::string, int> result =
@@ -391,36 +384,56 @@ namespace file_parser_tests {
 		}
 	};
 
-	TEST_CLASS(complex_expressions)
+	TEST_CLASS(comments_and_strings)
 	{
 	public:
-		TEST_METHOD(math_expression)
+		TEST_METHOD(string_initialization)
 		{
 			std::map<std::string, int> result =
 			{
 				{ "std", 1 },
 				{ "string", 1 },
-				{ "a", 2 },
-				{ "b", 1 },
-				{ "c", 1 },
-				{ "d", 3 },
-				{ "f", 4 },
 				{ "s", 1 },
 			};
 			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
 		}
 
-		TEST_METHOD(nested_function_calls)
+		TEST_METHOD(single_line_comment)
 		{
 			std::map<std::string, int> result =
 			{
 				{ "a", 1 },
-				{ "b", 2 },
+				{ "b", 1 },
 				{ "c", 1 },
-				{ "d", 1 },
-				{ "e", 1 },
-				{ "f", 1 },
-				{ "g", 1 },
+			};
+			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
+		}
+
+		TEST_METHOD(multiline_comment)
+		{
+			std::map<std::string, int> result =
+			{
+				{ "a", 1 },
+			};
+			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
+		}
+
+		TEST_METHOD(multiline_comment2)
+		{
+			std::map<std::string, int> result =
+			{
+				{ "a", 1 },
+			};
+			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
+		}
+
+		TEST_METHOD(tabs)
+		{
+			std::map<std::string, int> result =
+			{
+				{ "a", 1 },
+				{ "b", 1 },
+				{ "c", 1 },
 			};
 			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
 		}
@@ -495,28 +508,7 @@ namespace file_parser_tests {
 		}
 	};
 
-	TEST_CLASS(class_declaration)
-	{
-	public:
-		TEST_METHOD(class1)
-		{
-			std::map<std::string, int> result =
-			{
-				{ "c", 1 },
-				{ "other", 1 },
-				{ "other2", 1 },
-				{ "get", 1 },
-				{ "value", 1 },
-				{ "empty", 1 },
-				{ "add", 1 },
-				{ "type", 1 },
-				{ "v", 1 },
-			};
-			Assert::IsTrue(get_parsed_result(__FUNCTION__) == result);
-		}
-	};
-
-	TEST_CLASS(variable_name_restrictiona)
+	TEST_CLASS(variable_name_restrictions)
 	{
 	public:
 		TEST_METHOD(long_names)
@@ -547,20 +539,6 @@ namespace file_parser_tests {
 			{
 				Assert::Fail();
 			}
-		}
-	};
-
-	TEST_CLASS(incorrect_file_names)
-	{
-	public:
-		TEST_METHOD(invalid_name)
-		{
-			Assert::ExpectException<io_exception>([] { get_parsed_result("abc:def.ghi"); });
-		}
-
-		TEST_METHOD(missing_file)
-		{
-			Assert::ExpectException<io_exception>([] { get_parsed_result("gisgdvisgvisdgvsidgvsdigv.khvdvlshgvgh"); });
 		}
 	};
 
