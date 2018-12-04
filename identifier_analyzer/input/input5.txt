@@ -1,0 +1,4 @@
+int myclass::mymethod(int i, string s, object o) const
+{
+	int a,b;
+}

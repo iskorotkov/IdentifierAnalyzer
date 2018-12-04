@@ -1,0 +1,6 @@
+int a;// int b, c;
+int a;/*
+int b,c;
+int b = b+c;
+*/int a;
+string s=/*b+c+*/s+s;

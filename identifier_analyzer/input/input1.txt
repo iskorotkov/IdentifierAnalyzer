@@ -1,0 +1,4 @@
+int a, b, c;
+std::string s;
+int d = a+b+c*c*c+d;
+double f = (double)d^1;

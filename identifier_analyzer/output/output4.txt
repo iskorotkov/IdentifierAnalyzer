@@ -1,0 +1,9 @@
+a                1
+b                1
+data             1
+get              1
+method1          1
+method2          1
+myclass          1
+otherclass       1
+string           1

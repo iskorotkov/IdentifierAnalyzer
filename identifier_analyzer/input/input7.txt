@@ -1,0 +1,6 @@
+#define pi 3.14
+#define mymark 100
+#define sum(a,b) a+b
+#include <string>
+#if int a = b+c;
+#endif

@@ -140,7 +140,27 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />
+    <Text Include="input\input1.txt" />
+    <Text Include="input\input10.txt" />
+    <Text Include="input\input2.txt" />
+    <Text Include="input\input3.txt" />
+    <Text Include="input\input4.txt" />
+    <Text Include="input\input5.txt" />
+    <Text Include="input\input6.txt" />
+    <Text Include="input\input7.txt" />
+    <Text Include="input\input8.txt" />
+    <Text Include="input\input9.txt" />
     <Text Include="output.txt" />
+    <Text Include="output\output1.txt" />
+    <Text Include="output\output10.txt" />
+    <Text Include="output\output2.txt" />
+    <Text Include="output\output3.txt" />
+    <Text Include="output\output4.txt" />
+    <Text Include="output\output5.txt" />
+    <Text Include="output\output6.txt" />
+    <Text Include="output\output7.txt" />
+    <Text Include="output\output8.txt" />
+    <Text Include="output\output9.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

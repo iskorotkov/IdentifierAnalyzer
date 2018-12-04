@@ -1,0 +1,10 @@
+a                1
+b                1
+c                1
+d                1
+f                1
+first            1
+ins              1
+l                1
+second           1
+third            1

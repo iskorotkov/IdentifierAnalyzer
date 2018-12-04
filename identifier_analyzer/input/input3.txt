@@ -1,0 +1,4 @@
+for(int i=0;i<end;++i){int body;}
+while(true);
+do {} while(a<b);
+for(char c:str) {}

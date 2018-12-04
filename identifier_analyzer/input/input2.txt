@@ -1,0 +1,5 @@
+if (!a&&b^c||d+f|l==1)
+{
+	int ins;
+}
+first()?second():third();

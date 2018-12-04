@@ -1,0 +1,9 @@
+T                4
+lhs              3
+rhs              3
+string           2
+temp             2
+dictionary       1
+map              1
+swap             1
+vector           1

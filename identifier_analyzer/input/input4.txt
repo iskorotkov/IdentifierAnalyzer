@@ -1,0 +1,7 @@
+class myclass : otherclass
+{
+public:
+	void method1() const;
+	string method2(int a, int b);
+	data get();
+}

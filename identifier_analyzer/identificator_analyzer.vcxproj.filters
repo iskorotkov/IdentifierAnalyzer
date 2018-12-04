@@ -40,6 +40,12 @@
     <Filter Include="Source Files\utility">
       <UniqueIdentifier>{33bf6ae5-1843-4b7a-b0d3-9921eb79b8e0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\input">
+      <UniqueIdentifier>{5e5396d0-c10e-4e16-8330-28ec5b9839de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\output">
+      <UniqueIdentifier>{f2d1ffcc-2c7c-44e2-a962-5a2db4c87ea6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -99,6 +105,66 @@
     </Text>
     <Text Include="output.txt">
       <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="input\input1.txt">
+      <Filter>Resource Files\input</Filter>
+    </Text>
+    <Text Include="input\input2.txt">
+      <Filter>Resource Files\input</Filter>
+    </Text>
+    <Text Include="input\input3.txt">
+      <Filter>Resource Files\input</Filter>
+    </Text>
+    <Text Include="input\input4.txt">
+      <Filter>Resource Files\input</Filter>
+    </Text>
+    <Text Include="input\input5.txt">
+      <Filter>Resource Files\input</Filter>
+    </Text>
+    <Text Include="input\input6.txt">
+      <Filter>Resource Files\input</Filter>
+    </Text>
+    <Text Include="input\input7.txt">
+      <Filter>Resource Files\input</Filter>
+    </Text>
+    <Text Include="input\input8.txt">
+      <Filter>Resource Files\input</Filter>
+    </Text>
+    <Text Include="input\input9.txt">
+      <Filter>Resource Files\input</Filter>
+    </Text>
+    <Text Include="input\input10.txt">
+      <Filter>Resource Files\input</Filter>
+    </Text>
+    <Text Include="output\output1.txt">
+      <Filter>Resource Files\output</Filter>
+    </Text>
+    <Text Include="output\output2.txt">
+      <Filter>Resource Files\output</Filter>
+    </Text>
+    <Text Include="output\output3.txt">
+      <Filter>Resource Files\output</Filter>
+    </Text>
+    <Text Include="output\output4.txt">
+      <Filter>Resource Files\output</Filter>
+    </Text>
+    <Text Include="output\output5.txt">
+      <Filter>Resource Files\output</Filter>
+    </Text>
+    <Text Include="output\output6.txt">
+      <Filter>Resource Files\output</Filter>
+    </Text>
+    <Text Include="output\output7.txt">
+      <Filter>Resource Files\output</Filter>
+    </Text>
+    <Text Include="output\output8.txt">
+      <Filter>Resource Files\output</Filter>
+    </Text>
+    <Text Include="output\output9.txt">
+      <Filter>Resource Files\output</Filter>
+    </Text>
+    <Text Include="output\output10.txt">
+      <Filter>Resource Files\output</Filter>
     </Text>
   </ItemGroup>
 </Project>
