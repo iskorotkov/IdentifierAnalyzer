@@ -20,6 +20,6 @@ private:
 	/** Находит наиболее часто встречаемый идентификатор в словаре */
 	std::map<std::string, int>::const_iterator get_most_frequent_word(const std::map<std::string, int>& words) const;
 
-	/** Выводит пару идентификатор-количество в два столбика с выраниванием */
+	/** Выводит пару идентификатор-количество в два столбика с выравниванием */
 	void write_pair(const std::pair<const std::string, int>& p, std::ofstream& stream) const;
 };
