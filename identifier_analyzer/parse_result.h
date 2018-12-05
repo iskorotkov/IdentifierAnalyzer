@@ -1,5 +1,6 @@
 #pragma once
 #include <map>
+#include <string>
 
 /** Класс для хранения данных о наличии и количестве различных идентификаторов */
 class parse_result

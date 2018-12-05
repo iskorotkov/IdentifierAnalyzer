@@ -8,7 +8,7 @@ class parse_result_writer
 {
 public:
 	/** Выводит словарь строка-число в консоль */
-	void write_result(std::map<std::string, int> result, std::string file_name) const;
+	void write_result(std::map<std::string,int>& parsed_words, std::string file_name) const;
 
 private:
 	/** Ширина колонки для имени идентификатора */
@@ -21,5 +21,5 @@ private:
 	std::map<std::string, int>::const_iterator get_most_frequent_word(const std::map<std::string, int>& words) const;
 
 	/** Выводит пару идентификатор-количество в два столбика с выравниванием */
-	void write_pair(const std::pair<const std::string, int>& p, std::ofstream& stream) const;
+	void write_pair(const std::string& name, int count, std::ofstream& stream) const;
 };
