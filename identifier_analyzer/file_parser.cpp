@@ -85,6 +85,10 @@ void file_parser::remove_literals_and_comments(std::string& line)
 	auto commenting_start = 0;
 	for (size_t i = 0; i < line.length() - 1; ++i)
 	{
+		if (i >= line.size())
+		{
+			break;
+		}
 		if (char_utility::is_quotation(line[i]) && !is_commented_out)
 		{
 			auto end = char_utility::find_string_literal_end(line, i + 1);
@@ -104,9 +108,9 @@ void file_parser::remove_literals_and_comments(std::string& line)
 		}
 		else if (line[i] == '*' && line[i + 1] == '/' && is_commented_out)
 		{
-			line.erase(commenting_start, i - commenting_start + 1);
+			line.erase(commenting_start, i - commenting_start + 2);
 			is_commented_out = false;
-			--i;
+			i = commenting_start - 1;
 		}
 	}
 	if (is_commented_out)
